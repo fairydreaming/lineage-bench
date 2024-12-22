@@ -134,3 +134,83 @@ Select the correct answer:
 5. None of the above is correct.
 Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.
 ```
+
+## Usage
+
+The usual workflow is to:
+
+1. Run lineage_bench.py to generate lineage relationship quizzes.
+2. Run run_openrouter.py to test LLM models.
+3. Run compute_metrics.py to calculate benchmark results.
+4. Run plot_graph.py to generate a results plot.
+
+Output is usually written to the standard output. Input is usually read from the standard input.
+
+Example usage:
+```
+$ ./lineage_bench.py -s -l 8 -n 10 -r 42|./run_openrouter.py -m "google/gemini-pro-1.5" -t 8 -v|tee results/gemini-pro-1.5_8.log
+$ cat results/*.csv|./compute_metrics.py --csv|./plot_graph.py -o results.png
+```
+
+### lineage_bench.py
+
+```
+usage: lineage_bench.py [-h] -l LENGTH [-p PROMPT] [-s] [-n NUMBER] [-r SEED]
+
+options:
+  -h, --help            show this help message and exit
+  -l LENGTH, --length LENGTH
+                        Number of people connected with lineage relationships in the quiz.
+  -p PROMPT, --prompt PROMPT
+                        Prompt template of the quiz. The default prompt template is: 'Given the following lineage
+                        relationships:\n{quiz_relations}\n{quiz_question}\nSelect the correct answer:\n{quiz_answers}\nEnclose the selected
+                        answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.'
+  -s, --shuffle         Shuffle the order of lineage relations in the quiz.
+  -n NUMBER, --number NUMBER
+                        Number of quizzes generated for each valid answer option.
+  -r SEED, --seed SEED  Random seed value
+```
+
+### run_openrouter.py
+
+```
+usage: run_openrouter.py [-h] -m MODEL [-p PROVIDER] [-e EFFORT] [-t THREADS] [-v] [-s [SYSTEM_PROMPT]]
+
+options:
+  -h, --help            show this help message and exit
+  -m MODEL, --model MODEL
+                        OpenRouter model name.
+  -p PROVIDER, --provider PROVIDER
+                        OpenRouter provider name.
+  -e EFFORT, --effort EFFORT
+                        Reasoning effort (o1 model only).
+  -t THREADS, --threads THREADS
+                        Number of threads to use.
+  -v, --verbose         Enable verbose output.
+  -s [SYSTEM_PROMPT], --system-prompt [SYSTEM_PROMPT]
+                        Use given system prompt. By default, the system prompt is not used. When this option is passed without a value, the
+                        default system prompt value is used: 'You are a master of logical thinking. You carefully analyze the premises step by
+                        step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any
+                        question.'
+```
+
+### compute_metrics.py
+
+```
+usage: compute_metrics.py [-h] [-c]
+
+options:
+  -h, --help  show this help message and exit
+  -c, --csv   Generate CSV output.
+```
+
+### plot_graph.py
+
+```
+usage: plot_graph.py [-h] [-o OUTPUT]
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        Write rendered plot to this file.
+```
