@@ -148,7 +148,7 @@ Output is usually written to the standard output. Input is usually read from the
 
 Example usage:
 ```
-$ ./lineage_bench.py -s -l 8 -n 10 -r 42|./run_openrouter.py -m "google/gemini-pro-1.5" -t 8 -v|tee results/gemini-pro-1.5_8.log
+$ ./lineage_bench.py -s -l 8 -n 10 -r 42|./run_openrouter.py -m "google/gemini-pro-1.5" -t 8 -v|tee results/gemini-pro-1.5_8.csv
 $ cat results/*.csv|./compute_metrics.py --csv|./plot_graph.py -o results.png
 ```
 
