@@ -41,11 +41,23 @@ df = df.pivot(index=['problem_size', 'model_name'], columns='relation_name', val
 
 df['lineage'] = df[['ANCESTOR', 'DESCENDANT', 'COMMON_ANCESTOR', 'COMMON_DESCENDANT']].mean(axis=1)
 
+df = df[['problem_size', 'model_name', 'lineage']]
+
+df = df.pivot(index=['model_name'], columns='problem_size', values='lineage').fillna(0).reset_index()
+
+problem_sizes = [8, 16, 32, 64]
+
+df['lineage'] = df[problem_sizes].mean(axis=1)
+
+df = df[['model_name', 'lineage'] + problem_sizes]
+
+df = df.rename(columns={ size: f'lineage-{size}' for size in problem_sizes })
+
 df = df.sort_values(['lineage'], ascending=False)
 
 df['Nr'] = df['lineage'].rank(method='min', ascending=False).astype('int32')
 
-df = df[['Nr', 'problem_size', 'model_name', 'lineage', 'ANCESTOR', 'DESCENDANT', 'COMMON_ANCESTOR', 'COMMON_DESCENDANT']]
+df = df[['Nr', 'model_name', 'lineage'] + [f'lineage-{size}' for size in problem_sizes]]
 
 if gen_csv:
     print(df.to_csv(index=False))
