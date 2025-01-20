@@ -6,7 +6,8 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 ## Results
 
 ### Plot
-![Lineage Benchmark Results Plot](https://github.com/user-attachments/assets/1268c57c-f2c6-422d-9694-8b6a85f607d3)
+
+![results](https://github.com/user-attachments/assets/cf469106-cc1e-4da3-81e5-62fad9e94ee7)
 
 ### Table
 
@@ -14,19 +15,20 @@ The table below presents the benchmark results.
 
 |   Nr | model_name                         |   lineage |   lineage-8 |   lineage-16 |   lineage-32 |   lineage-64 |
 |-----:|:-----------------------------------|----------:|------------:|-------------:|-------------:|-------------:|
-|    1 | deepseek/deepseek-chat             |      0.61 |        0.86 |         0.59 |         0.53 |         0.46 |
-|    2 | openai/o1-mini                     |      0.56 |        0.95 |         0.82 |         0.40 |         0.08 |
-|    3 | google/gemini-pro-1.5              |      0.49 |        0.62 |         0.53 |         0.44 |         0.38 |
-|    4 | openai/gpt-4o-2024-11-20           |      0.49 |        0.76 |         0.55 |         0.42 |         0.23 |
-|    5 | meta-llama/llama-3.1-405b-instruct |      0.49 |        0.66 |         0.59 |         0.46 |         0.24 |
-|    6 | qwen/qwq-32b-preview               |      0.48 |        0.85 |         0.59 |         0.32 |         0.16 |
-|    7 | mistralai/mistral-large-2411       |      0.47 |        0.69 |         0.51 |         0.36 |         0.34 |
-|    8 | meta-llama/llama-3.3-70b-instruct  |      0.44 |        0.62 |         0.48 |         0.34 |         0.30 |
-|    9 | x-ai/grok-2-1212                   |      0.41 |        0.58 |         0.40 |         0.36 |         0.29 |
-|   10 | gemini-2.0-flash-thinking-exp-1219 |      0.40 |        0.59 |         0.46 |         0.33 |         0.20 |
-|   11 | minimax/minimax-01                 |      0.29 |        0.56 |         0.37 |         0.15 |         0.09 |
-|   12 | gemini-2.0-flash-exp               |      0.25 |        0.46 |         0.19 |         0.20 |         0.14 |
-|   13 | anthropic/claude-3.5-sonnet        |      0.22 |        0.65 |         0.21 |         0.04 |         0.00 |
+|    1 | deepseek/deepseek-r1               |      0.92 |        0.96 |         0.98 |         0.94 |         0.78 |
+|    2 | deepseek/deepseek-chat             |      0.61 |        0.86 |         0.59 |         0.53 |         0.46 |
+|    3 | openai/o1-mini                     |      0.56 |        0.95 |         0.82 |         0.40 |         0.08 |
+|    4 | google/gemini-pro-1.5              |      0.49 |        0.62 |         0.53 |         0.44 |         0.38 |
+|    5 | openai/gpt-4o-2024-11-20           |      0.49 |        0.76 |         0.55 |         0.42 |         0.23 |
+|    6 | meta-llama/llama-3.1-405b-instruct |      0.49 |        0.66 |         0.59 |         0.46 |         0.24 |
+|    7 | qwen/qwq-32b-preview               |      0.48 |        0.85 |         0.59 |         0.32 |         0.16 |
+|    8 | mistralai/mistral-large-2411       |      0.47 |        0.69 |         0.51 |         0.36 |         0.34 |
+|    9 | meta-llama/llama-3.3-70b-instruct  |      0.44 |        0.62 |         0.48 |         0.34 |         0.30 |
+|   10 | x-ai/grok-2-1212                   |      0.41 |        0.58 |         0.40 |         0.36 |         0.29 |
+|   11 | gemini-2.0-flash-thinking-exp-1219 |      0.40 |        0.59 |         0.46 |         0.33 |         0.20 |
+|   12 | minimax/minimax-01                 |      0.29 |        0.56 |         0.37 |         0.15 |         0.09 |
+|   13 | gemini-2.0-flash-exp               |      0.25 |        0.46 |         0.19 |         0.20 |         0.14 |
+|   14 | anthropic/claude-3.5-sonnet        |      0.22 |        0.65 |         0.21 |         0.04 |         0.00 |
 
 Each row contains the average benchmark score across all problem sizes, and separate scores for each problem size.
 
