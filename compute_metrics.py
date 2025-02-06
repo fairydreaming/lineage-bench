@@ -80,5 +80,5 @@ else:
 if gen_csv:
     print(df.to_csv(index=False))
 else:
-    print(df.to_markdown(floatfmt=".2f", index=False))
+    print(df.to_markdown(floatfmt=".3f", index=False))
 
