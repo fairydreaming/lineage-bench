@@ -7,28 +7,36 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ### Plot
 
-![results](https://github.com/user-attachments/assets/cf469106-cc1e-4da3-81e5-62fad9e94ee7)
+![results_stacked](https://github.com/user-attachments/assets/8d88f6b1-4aae-40d2-98d8-076a3e17a3cc)
 
 ### Table
 
 The table below presents the benchmark results.
 
-|   Nr | model_name                         |   lineage |   lineage-8 |   lineage-16 |   lineage-32 |   lineage-64 |
-|-----:|:-----------------------------------|----------:|------------:|-------------:|-------------:|-------------:|
-|    1 | deepseek/deepseek-r1               |      0.92 |        0.96 |         0.98 |         0.94 |         0.78 |
-|    2 | deepseek/deepseek-chat             |      0.61 |        0.86 |         0.59 |         0.53 |         0.46 |
-|    3 | openai/o1-mini                     |      0.56 |        0.95 |         0.82 |         0.40 |         0.08 |
-|    4 | google/gemini-pro-1.5              |      0.49 |        0.62 |         0.53 |         0.44 |         0.38 |
-|    5 | openai/gpt-4o-2024-11-20           |      0.49 |        0.76 |         0.55 |         0.42 |         0.23 |
-|    6 | meta-llama/llama-3.1-405b-instruct |      0.49 |        0.66 |         0.59 |         0.46 |         0.24 |
-|    7 | qwen/qwq-32b-preview               |      0.48 |        0.85 |         0.59 |         0.32 |         0.16 |
-|    8 | mistralai/mistral-large-2411       |      0.47 |        0.69 |         0.51 |         0.36 |         0.34 |
-|    9 | meta-llama/llama-3.3-70b-instruct  |      0.44 |        0.62 |         0.48 |         0.34 |         0.30 |
-|   10 | x-ai/grok-2-1212                   |      0.41 |        0.58 |         0.40 |         0.36 |         0.29 |
-|   11 | gemini-2.0-flash-thinking-exp-1219 |      0.40 |        0.59 |         0.46 |         0.33 |         0.20 |
-|   12 | minimax/minimax-01                 |      0.29 |        0.56 |         0.37 |         0.15 |         0.09 |
-|   13 | gemini-2.0-flash-exp               |      0.25 |        0.46 |         0.19 |         0.20 |         0.14 |
-|   14 | anthropic/claude-3.5-sonnet        |      0.22 |        0.65 |         0.21 |         0.04 |         0.00 |
+|   Nr | model_name                             |   lineage |   lineage-8 |   lineage-16 |   lineage-32 |   lineage-64 |
+|-----:|:---------------------------------------|----------:|------------:|-------------:|-------------:|-------------:|
+|    1 | openai/o1                              |     0.921 |       1.000 |        0.980 |        0.925 |        0.780 |
+|    2 | deepseek/deepseek-r1                   |     0.917 |       0.965 |        0.980 |        0.945 |        0.780 |
+|    3 | openai/o3-mini                         |     0.726 |       0.970 |        0.945 |        0.795 |        0.195 |
+|    4 | deepseek/deepseek-r1-distill-qwen-32b  |     0.613 |       0.805 |        0.685 |        0.595 |        0.365 |
+|    5 | deepseek/deepseek-chat                 |     0.610 |       0.860 |        0.590 |        0.530 |        0.460 |
+|    6 | openai/o1-mini                         |     0.562 |       0.955 |        0.820 |        0.400 |        0.075 |
+|    7 | deepseek/deepseek-r1-distill-llama-70b |     0.552 |       0.755 |        0.605 |        0.510 |        0.340 |
+|    8 | gemini-exp-1206                        |     0.517 |       0.640 |        0.495 |        0.455 |        0.480 |
+|    9 | google/gemini-pro-1.5                  |     0.492 |       0.620 |        0.530 |        0.440 |        0.380 |
+|   10 | openai/gpt-4o-2024-11-20               |     0.490 |       0.755 |        0.545 |        0.425 |        0.235 |
+|   11 | meta-llama/llama-3.1-405b-instruct     |     0.489 |       0.660 |        0.590 |        0.465 |        0.240 |
+|   12 | qwen/qwq-32b-preview                   |     0.476 |       0.845 |        0.585 |        0.315 |        0.160 |
+|   13 | mistralai/mistral-large-2411           |     0.475 |       0.695 |        0.510 |        0.360 |        0.335 |
+|   14 | qwen/qwen-max                          |     0.463 |       0.710 |        0.435 |        0.410 |        0.295 |
+|   15 | meta-llama/llama-3.3-70b-instruct      |     0.438 |       0.625 |        0.485 |        0.340 |        0.300 |
+|   16 | deepseek/deepseek-r1-distill-qwen-14b  |     0.426 |       0.830 |        0.600 |        0.195 |        0.080 |
+|   17 | x-ai/grok-2-1212                       |     0.405 |       0.580 |        0.395 |        0.360 |        0.285 |
+|   18 | gemini-2.0-flash-thinking-exp-1219     |     0.395 |       0.595 |        0.465 |        0.325 |        0.195 |
+|   19 | minimax/minimax-01                     |     0.292 |       0.560 |        0.370 |        0.155 |        0.085 |
+|   20 | gemini-2.0-flash-exp                   |     0.247 |       0.460 |        0.190 |        0.200 |        0.140 |
+|   21 | anthropic/claude-3.5-sonnet            |     0.221 |       0.645 |        0.205 |        0.035 |        0.000 |
+
 
 Each row contains the average benchmark score across all problem sizes, and separate scores for each problem size.
 
@@ -163,17 +171,30 @@ options:
 ### compute_metrics.py
 
 ```
-usage: compute_metrics.py [-h] [-c]
+usage: compute_metrics.py [-h] [-c] [-r] [-d]
 
 options:
-  -h, --help  show this help message and exit
-  -c, --csv   Generate CSV output.
+  -h, --help      show this help message and exit
+  -c, --csv       Generate CSV output.
+  -r, --relaxed   Relaxed answer format requirements
+  -d, --detailed  Generate detailed output
 ```
 
-### plot_graph.py
+### plot_line.py
 
 ```
-usage: plot_graph.py [-h] [-o OUTPUT]
+usage: plot_line.py [-h] [-o OUTPUT]
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        Write rendered plot to this file.
+```
+
+### plot_stacked.py
+
+```
+usage: plot_stacked.py [-h] [-o OUTPUT]
 
 options:
   -h, --help            show this help message and exit
