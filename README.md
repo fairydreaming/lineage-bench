@@ -116,14 +116,14 @@ The usual workflow is to:
 1. Run lineage_bench.py to generate lineage relationship quizzes.
 2. Run run_openrouter.py to test LLM models.
 3. Run compute_metrics.py to calculate benchmark results.
-4. Run plot_graph.py to generate a results plot.
+4. Run plot_stacked.py to generate a results plot.
 
 Output is usually written to the standard output. Input is usually read from the standard input.
 
 Example usage:
 ```
 $ ./lineage_bench.py -s -l 8 -n 10 -r 42|./run_openrouter.py -m "google/gemini-pro-1.5" -t 8 -v|tee results/gemini-pro-1.5_8.csv
-$ cat results/*.csv|./compute_metrics.py --csv|./plot_graph.py -o results.png
+$ cat results/*.csv|./compute_metrics.py --csv --relaxed|./plot_stacked.py -o results.png
 ```
 
 ### lineage_bench.py
