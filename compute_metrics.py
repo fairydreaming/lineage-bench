@@ -19,6 +19,7 @@ def extract_answer(row, relaxed):
     if relaxed:
         relaxed_answer_regexes = [
             r'boxed\{([0-9])\}',
+            r'mathbf\{([0-9])\}',
             r'</ANSWER>([0-9])</ANSWER>',
             r'ANSWER: ?([0-9])',
             r'\*\*ANSWER\*\*:? ?([0-9])',
