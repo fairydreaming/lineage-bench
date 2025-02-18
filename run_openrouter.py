@@ -18,6 +18,8 @@ parser.add_argument("-e", "--effort", help="Reasoning effort (o1 model only).")
 parser.add_argument("-t", "--threads", help="Number of threads to use.", type=int, default=8)
 parser.add_argument("-v", "--verbose", help="Enable verbose output.", action="store_true")
 parser.add_argument("-s", "--system-prompt", help="Use given system prompt. By default, the system prompt is not used. When this option is passed without a value, the default system prompt value is used: " + repr(DEFAULT_SYSTEM_PROMPT), const=DEFAULT_SYSTEM_PROMPT, default=None, nargs='?')
+parser.add_argument("-T", "--temp", help="Temperature value to use.", type=float, default=0.01)
+parser.add_argument("-n", "--max-tokens", help="Max number of tokens to generate.", type=float, default=16384)
 args = parser.parse_args()
 model_name = args.model
 provider_name = args.provider
@@ -25,6 +27,8 @@ system_prompt = args.system_prompt
 reasoning_effort = args.effort
 num_threads = args.threads
 is_verbose = args.verbose
+temperature = args.temp
+max_tokens = args.max_tokens
 
 quiz_reader = csv.reader(sys.stdin, delimiter=',', quotechar='"')
 csv_writer = csv.writer(sys.stdout)
@@ -49,9 +53,10 @@ def make_request(row):
 
     request_data = {
         "model": model_name,
-        "temperature": 0.01,
+        "temperature": temperature,
         "seed": 42,
-        "messages": messages
+        "max_tokens": max_tokens,
+        "messages": messages,
     }
 
     if provider_name:
@@ -60,6 +65,9 @@ def make_request(row):
     if reasoning_effort:
         assert(reasoning_effort in ["low", "medium", "high"])
         request_data["reasoning_effort"] = reasoning_effort
+
+    if is_verbose:
+        print(f"Request: {request_data}", file=sys.stderr)
 
     while True:
         try:
@@ -77,6 +85,9 @@ def make_request(row):
                 continue
 
             response_json = response.json()
+
+            if is_verbose:
+                print(f"Response: {response_json}", file=sys.stderr)
 
             model_response = response_json["choices"][0]["message"]["content"]
             provider_name = response_json["provider"]
