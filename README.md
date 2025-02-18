@@ -3,11 +3,19 @@ Testing LLM reasoning abilities with lineage relationship quizzes.
 
 The project is a successor of the [farel-bench](https://github.com/fairydreaming/farel-bench) benchmark.
 
+## Changelog
+
+* 2024-02-18 - Added results for kimi-k1.5-preview and llama-3.1-tulu-3-405b
+* 2024-02-06 - Added results for o1, o3-mini, qwen-max, gemini-exp-1206, deepseek-r1-distill-qwen-14b and deepseek-r1-distill-qwen-32b
+* 2024-01-24 - Added results for deepseek-r1-distill-llama-70b
+* 2024-01-20 - Added results for deepseek-r1
+* 2024-01-15 - Added results for deepseek-v3, gemini-2.0-flash-exp, gemini-2.0-flash-thinking-exp-1219 and minimax-01
+
 ## Results
 
 ### Plot
 
-![results_stacked](https://github.com/user-attachments/assets/8d88f6b1-4aae-40d2-98d8-076a3e17a3cc)
+![results_stacked](https://github.com/user-attachments/assets/476b51c5-37fa-4562-8561-215a8e876c65)
 
 ### Table
 
@@ -18,24 +26,27 @@ The table below presents the benchmark results.
 |    1 | openai/o1                              |     0.921 |       1.000 |        0.980 |        0.925 |        0.780 |
 |    2 | deepseek/deepseek-r1                   |     0.917 |       0.965 |        0.980 |        0.945 |        0.780 |
 |    3 | openai/o3-mini                         |     0.726 |       0.970 |        0.945 |        0.795 |        0.195 |
+|    4 | kimi-k1.5-preview                      |     0.613 |       0.830 |        0.655 |        0.635 |        0.330 |
 |    4 | deepseek/deepseek-r1-distill-qwen-32b  |     0.613 |       0.805 |        0.685 |        0.595 |        0.365 |
-|    5 | deepseek/deepseek-chat                 |     0.610 |       0.860 |        0.590 |        0.530 |        0.460 |
-|    6 | openai/o1-mini                         |     0.562 |       0.955 |        0.820 |        0.400 |        0.075 |
-|    7 | deepseek/deepseek-r1-distill-llama-70b |     0.552 |       0.755 |        0.605 |        0.510 |        0.340 |
-|    8 | gemini-exp-1206                        |     0.517 |       0.640 |        0.495 |        0.455 |        0.480 |
-|    9 | google/gemini-pro-1.5                  |     0.492 |       0.620 |        0.530 |        0.440 |        0.380 |
-|   10 | openai/gpt-4o-2024-11-20               |     0.490 |       0.755 |        0.545 |        0.425 |        0.235 |
-|   11 | meta-llama/llama-3.1-405b-instruct     |     0.489 |       0.660 |        0.590 |        0.465 |        0.240 |
-|   12 | qwen/qwq-32b-preview                   |     0.476 |       0.845 |        0.585 |        0.315 |        0.160 |
-|   13 | mistralai/mistral-large-2411           |     0.475 |       0.695 |        0.510 |        0.360 |        0.335 |
-|   14 | qwen/qwen-max                          |     0.463 |       0.710 |        0.435 |        0.410 |        0.295 |
-|   15 | meta-llama/llama-3.3-70b-instruct      |     0.438 |       0.625 |        0.485 |        0.340 |        0.300 |
-|   16 | deepseek/deepseek-r1-distill-qwen-14b  |     0.426 |       0.830 |        0.600 |        0.195 |        0.080 |
-|   17 | x-ai/grok-2-1212                       |     0.405 |       0.580 |        0.395 |        0.360 |        0.285 |
-|   18 | gemini-2.0-flash-thinking-exp-1219     |     0.395 |       0.595 |        0.465 |        0.325 |        0.195 |
-|   19 | minimax/minimax-01                     |     0.292 |       0.560 |        0.370 |        0.155 |        0.085 |
-|   20 | gemini-2.0-flash-exp                   |     0.247 |       0.460 |        0.190 |        0.200 |        0.140 |
-|   21 | anthropic/claude-3.5-sonnet            |     0.221 |       0.645 |        0.205 |        0.035 |        0.000 |
+|    6 | deepseek/deepseek-chat                 |     0.610 |       0.860 |        0.590 |        0.530 |        0.460 |
+|    7 | openai/o1-mini                         |     0.562 |       0.955 |        0.820 |        0.400 |        0.075 |
+|    8 | deepseek/deepseek-r1-distill-llama-70b |     0.552 |       0.755 |        0.605 |        0.510 |        0.340 |
+|    9 | gemini-exp-1206                        |     0.517 |       0.640 |        0.495 |        0.455 |        0.480 |
+|   10 | google/gemini-pro-1.5                  |     0.492 |       0.620 |        0.530 |        0.440 |        0.380 |
+|   11 | openai/gpt-4o-2024-11-20               |     0.490 |       0.755 |        0.545 |        0.425 |        0.235 |
+|   12 | meta-llama/llama-3.1-405b-instruct     |     0.489 |       0.660 |        0.590 |        0.465 |        0.240 |
+|   13 | qwen/qwq-32b-preview                   |     0.476 |       0.845 |        0.585 |        0.315 |        0.160 |
+|   14 | mistralai/mistral-large-2411           |     0.475 |       0.695 |        0.510 |        0.360 |        0.335 |
+|   14 | allenai/llama-3.1-tulu-3-405b          |     0.475 |       0.710 |        0.505 |        0.335 |        0.350 |
+|   16 | qwen/qwen-max                          |     0.463 |       0.710 |        0.435 |        0.410 |        0.295 |
+|   17 | meta-llama/llama-3.3-70b-instruct      |     0.438 |       0.625 |        0.485 |        0.340 |        0.300 |
+|   18 | deepseek/deepseek-r1-distill-qwen-14b  |     0.426 |       0.830 |        0.600 |        0.195 |        0.080 |
+|   19 | x-ai/grok-2-1212                       |     0.405 |       0.580 |        0.395 |        0.360 |        0.285 |
+|   20 | gemini-2.0-flash-thinking-exp-1219     |     0.395 |       0.595 |        0.465 |        0.325 |        0.195 |
+|   21 | minimax/minimax-01                     |     0.292 |       0.560 |        0.370 |        0.155 |        0.085 |
+|   22 | gemini-2.0-flash-exp                   |     0.247 |       0.460 |        0.190 |        0.200 |        0.140 |
+|   23 | anthropic/claude-3.5-sonnet            |     0.221 |       0.645 |        0.205 |        0.035 |        0.000 |
+
 
 
 Each row contains the average benchmark score across all problem sizes, and separate scores for each problem size.
@@ -166,6 +177,9 @@ options:
                         default system prompt value is used: 'You are a master of logical thinking. You carefully analyze the premises step by
                         step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any
                         question.'
+  -T TEMP, --temp TEMP  Temperature value to use.
+  -n MAX_TOKENS, --max-tokens MAX_TOKENS
+                        Max number of tokens to generate.
 ```
 
 ### compute_metrics.py
