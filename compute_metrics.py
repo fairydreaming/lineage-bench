@@ -21,15 +21,19 @@ def extract_answer(row, relaxed):
             r'boxed\{([0-9])\}',
             r'mathbf\{([0-9])\}',
             r'</ANSWER>([0-9])</ANSWER>',
-            r'ANSWER: ?([0-9])',
-            r'\*\*ANSWER\*\*:? ?([0-9])',
+            r'ANSWER:\s*([0-9])',
+            r'\*\*ANSWER\*\*:?\s*([0-9])',
             r'\*\*ANSWER>\*\*([0-9])</ANSWER>',
+            r'\*\*ANSWER>([0-9])</ANSWER>\*\*',
+            r'\*\*ANSWER:\*\*\s*([0-9])',
+            r'\*\*ANSWER\*\*\s*\n([0-9])',
         ]
         for relaxed_answer_regex in relaxed_answer_regexes:
-            matches = re.findall(relaxed_answer_regex, row['model_response'])
+            matches = re.findall(relaxed_answer_regex, row['model_response'], re.M)
             if matches:
                 return int(matches[0])
 
+    print(f"Unknown answer format or missing answer in: {row['model_response']}", file=sys.stderr)
     return 0
 
 parser = argparse.ArgumentParser()
