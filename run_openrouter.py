@@ -7,6 +7,7 @@ import argparse
 import time
 import json
 import requests
+import hashlib
 from concurrent.futures import ThreadPoolExecutor
 
 DEFAULT_SYSTEM_PROMPT="You are a master of logical thinking. You carefully analyze the premises step by step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any question."
@@ -41,10 +42,12 @@ def make_request(row):
     global api_key
     global is_verbose
 
-    if is_verbose:
-        print("Processing quiz", file=sys.stderr)
-
     problem_size, relation_name, correct_answer, quiz = row
+
+    quiz_id = hashlib.md5(quiz.encode('utf-8')).hexdigest()
+
+    if is_verbose:
+        print(f"[{quiz_id}] Processing quiz", file=sys.stderr)
 
     system_messages=[{"role": "system", "content": system_prompt }]
     messages=[{"role": "user", "content": quiz }]
@@ -67,7 +70,7 @@ def make_request(row):
         request_data["reasoning_effort"] = reasoning_effort
 
     if is_verbose:
-        print(f"Request: {request_data}", file=sys.stderr)
+        print(f"[{quiz_id}] Request: {request_data}", file=sys.stderr)
 
     while True:
         try:
@@ -78,22 +81,27 @@ def make_request(row):
             )
 
             if is_verbose:
-                print(f"Response status code: {response.status_code}", file=sys.stderr)
+                print(f"[{quiz_id}] Response status code: {response.status_code}", file=sys.stderr)
+
+            if is_verbose:
+                print(f"[{quiz_id}] Response: {response.text.strip()}", file=sys.stderr)
 
             if response.status_code != 200:
-                time.sleep(60)
-                continue
+                raise RuntimeError(f"Response status code: {response.status_code}")
 
             response_json = response.json()
 
-            if is_verbose:
-                print(f"Response: {response_json}", file=sys.stderr)
+            if "error" in response_json:
+                raise RuntimeError("Server error")
+
+            if "error" in response_json["choices"][0]:
+                raise RuntimeError("Upstream server error")
 
             model_response = response_json["choices"][0]["message"]["content"]
             provider_name = response_json["provider"]
             break
         except Exception as ex:
-            print(f"Caught exception: {ex}", file=sys.stderr)
+            print(f"[{quiz_id}] Caught exception: {ex}", file=sys.stderr)
             time.sleep(60)
             continue
 
