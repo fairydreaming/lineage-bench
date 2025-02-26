@@ -5,17 +5,18 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ## Changelog
 
-* 2024-02-18 - Added results for kimi-k1.5-preview and llama-3.1-tulu-3-405b
-* 2024-02-06 - Added results for o1, o3-mini, qwen-max, gemini-exp-1206, deepseek-r1-distill-qwen-14b and deepseek-r1-distill-qwen-32b
-* 2024-01-24 - Added results for deepseek-r1-distill-llama-70b
-* 2024-01-20 - Added results for deepseek-r1
-* 2024-01-15 - Added results for deepseek-v3, gemini-2.0-flash-exp, gemini-2.0-flash-thinking-exp-1219 and minimax-01
+* 2024-02-20 - Updated results for deepseek/deepseek-r1-distill-llama-70b. (used Groq provider with 0.5 temperature)
+* 2024-02-18 - Added results for kimi-k1.5-preview and llama-3.1-tulu-3-405b.
+* 2024-02-06 - Added results for o1, o3-mini, qwen-max, gemini-exp-1206, deepseek-r1-distill-qwen-14b and deepseek-r1-distill-qwen-32b.
+* 2024-01-24 - Added results for deepseek-r1-distill-llama-70b.
+* 2024-01-20 - Added results for deepseek-r1.
+* 2024-01-15 - Added results for deepseek-v3, gemini-2.0-flash-exp, gemini-2.0-flash-thinking-exp-1219 and minimax-01.
 
 ## Results
 
 ### Plot
 
-![results_stacked](https://github.com/user-attachments/assets/476b51c5-37fa-4562-8561-215a8e876c65)
+![results_stacked](https://github.com/user-attachments/assets/8999b3c4-1927-45b5-9a7e-e154ea3b709f)
 
 ### Table
 
@@ -25,12 +26,12 @@ The table below presents the benchmark results.
 |-----:|:---------------------------------------|----------:|------------:|-------------:|-------------:|-------------:|
 |    1 | openai/o1                              |     0.921 |       1.000 |        0.980 |        0.925 |        0.780 |
 |    2 | deepseek/deepseek-r1                   |     0.917 |       0.965 |        0.980 |        0.945 |        0.780 |
-|    3 | openai/o3-mini                         |     0.726 |       0.970 |        0.945 |        0.795 |        0.195 |
-|    4 | kimi-k1.5-preview                      |     0.613 |       0.830 |        0.655 |        0.635 |        0.330 |
-|    4 | deepseek/deepseek-r1-distill-qwen-32b  |     0.613 |       0.805 |        0.685 |        0.595 |        0.365 |
-|    6 | deepseek/deepseek-chat                 |     0.610 |       0.860 |        0.590 |        0.530 |        0.460 |
-|    7 | openai/o1-mini                         |     0.562 |       0.955 |        0.820 |        0.400 |        0.075 |
-|    8 | deepseek/deepseek-r1-distill-llama-70b |     0.552 |       0.755 |        0.605 |        0.510 |        0.340 |
+|    3 | deepseek/deepseek-r1-distill-llama-70b |     0.734 |       0.925 |        0.830 |        0.660 |        0.520 |
+|    4 | openai/o3-mini                         |     0.726 |       0.970 |        0.945 |        0.795 |        0.195 |
+|    5 | kimi-k1.5-preview                      |     0.613 |       0.830 |        0.655 |        0.635 |        0.330 |
+|    5 | deepseek/deepseek-r1-distill-qwen-32b  |     0.613 |       0.805 |        0.685 |        0.595 |        0.365 |
+|    7 | deepseek/deepseek-chat                 |     0.610 |       0.860 |        0.590 |        0.530 |        0.460 |
+|    8 | openai/o1-mini                         |     0.562 |       0.955 |        0.820 |        0.400 |        0.075 |
 |    9 | gemini-exp-1206                        |     0.517 |       0.640 |        0.495 |        0.455 |        0.480 |
 |   10 | google/gemini-pro-1.5                  |     0.492 |       0.620 |        0.530 |        0.440 |        0.380 |
 |   11 | openai/gpt-4o-2024-11-20               |     0.490 |       0.755 |        0.545 |        0.425 |        0.235 |
@@ -46,8 +47,6 @@ The table below presents the benchmark results.
 |   21 | minimax/minimax-01                     |     0.292 |       0.560 |        0.370 |        0.155 |        0.085 |
 |   22 | gemini-2.0-flash-exp                   |     0.247 |       0.460 |        0.190 |        0.200 |        0.140 |
 |   23 | anthropic/claude-3.5-sonnet            |     0.221 |       0.645 |        0.205 |        0.035 |        0.000 |
-
-
 
 Each row contains the average benchmark score across all problem sizes, and separate scores for each problem size.
 
