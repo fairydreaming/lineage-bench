@@ -27,6 +27,9 @@ def extract_answer(row, relaxed):
             r'\*\*ANSWER>([0-9])</ANSWER>\*\*',
             r'\*\*ANSWER:\*\*\s*([0-9])',
             r'\*\*ANSWER\*\*\s*\n([0-9])',
+            r'ANSWER>([0-9])</ANSWER>',
+            r'<ANSWER>([0-9])\\</ANSWER>',
+            r'<ANSWER\\>([0-9])\\</ANSWER\\>',
         ]
         for relaxed_answer_regex in relaxed_answer_regexes:
             matches = re.findall(relaxed_answer_regex, row['model_response'], re.M)
