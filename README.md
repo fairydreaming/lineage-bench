@@ -5,6 +5,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ## Changelog
 
+* 2024-03-04 - Updated results for perplexity/r1-1776. (apparently there was a problem with the model serving stack, that's why r1-1776 initially performed worse than expected)
 * 2024-02-26 - Added results for claude-3.7-sonnet (also with :thinking) and r1-1776
 * 2024-02-20 - Updated results for deepseek/deepseek-r1-distill-llama-70b. (used Groq provider with 0.5 temperature)
 * 2024-02-18 - Added results for kimi-k1.5-preview and llama-3.1-tulu-3-405b.
@@ -17,7 +18,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ### Plot
 
-![results_stacked](https://github.com/user-attachments/assets/a19a83d4-c60f-47f4-9ab1-dddf8cac63d1)
+![results_stacked](https://github.com/user-attachments/assets/0b42c1d4-d73e-46ce-a25b-2c766a005f83)
 
 ### Table
 
@@ -25,12 +26,12 @@ The table below presents the benchmark results.
 
 |   Nr | model_name                             |   lineage |   lineage-8 |   lineage-16 |   lineage-32 |   lineage-64 |
 |-----:|:---------------------------------------|----------:|------------:|-------------:|-------------:|-------------:|
-|    1 | openai/o1                              |     0.921 |       1.000 |        0.980 |        0.925 |        0.780 |
-|    2 | deepseek/deepseek-r1                   |     0.917 |       0.965 |        0.980 |        0.945 |        0.780 |
-|    3 | anthropic/claude-3.7-sonnet:thinking   |     0.898 |       0.985 |        0.970 |        0.910 |        0.725 |
-|    4 | deepseek/deepseek-r1-distill-llama-70b |     0.734 |       0.925 |        0.830 |        0.660 |        0.520 |
-|    5 | openai/o3-mini                         |     0.726 |       0.970 |        0.945 |        0.795 |        0.195 |
-|    6 | perplexity/r1-1776                     |     0.709 |       0.980 |        0.975 |        0.675 |        0.205 |
+|    1 | perplexity/r1-1776                     |     0.934 |       0.965 |        0.985 |        0.935 |        0.850 |
+|    2 | openai/o1                              |     0.921 |       1.000 |        0.980 |        0.925 |        0.780 |
+|    3 | deepseek/deepseek-r1                   |     0.917 |       0.965 |        0.980 |        0.945 |        0.780 |
+|    4 | anthropic/claude-3.7-sonnet:thinking   |     0.898 |       0.985 |        0.970 |        0.910 |        0.725 |
+|    5 | deepseek/deepseek-r1-distill-llama-70b |     0.734 |       0.925 |        0.830 |        0.660 |        0.520 |
+|    6 | openai/o3-mini                         |     0.726 |       0.970 |        0.945 |        0.795 |        0.195 |
 |    7 | kimi-k1.5-preview                      |     0.613 |       0.830 |        0.655 |        0.635 |        0.330 |
 |    7 | deepseek/deepseek-r1-distill-qwen-32b  |     0.613 |       0.805 |        0.685 |        0.595 |        0.365 |
 |    9 | deepseek/deepseek-chat                 |     0.610 |       0.860 |        0.590 |        0.530 |        0.460 |
