@@ -141,6 +141,17 @@ $ ./lineage_bench.py -s -l 8 -n 10 -r 42|./run_openrouter.py -m "google/gemini-p
 $ cat results/*.csv|./compute_metrics.py --csv --relaxed|./plot_stacked.py -o results.png
 ```
 
+I usually run the benchmark like this:
+
+```
+for length in 8 16 32 64
+do
+  ./lineage_bench.py -s -l $length -n 50 -r 42|./run_openrouter.py -m <model> -p <provider> -v|tee results/<model>_$length.log
+done
+```
+
+This results in 200 generated quizzes per problem size, 800 quizzes overall in a single benchmark run.
+
 ### lineage_bench.py
 
 ```
