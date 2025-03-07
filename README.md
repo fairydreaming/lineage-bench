@@ -19,7 +19,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ### Plot
 
-![results_stacked](https://github.com/user-attachments/assets/001fc02a-6d06-4a2c-a1c5-1797c753473b)
+![results_stacked](https://github.com/user-attachments/assets/559e686c-ce1e-4c9d-851e-1d9e2eb6f6b1)
 
 ### Table
 
