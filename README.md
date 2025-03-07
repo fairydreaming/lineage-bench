@@ -25,7 +25,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 The table below presents the benchmark results.
 
-|   Nr | model_name                             |   lineage |   lineage-8 |   lineage-16 |   lineage-32 |   lineage-64 |
+|   Nr | model_name                             |      mean |   lineage-8 |   lineage-16 |   lineage-32 |   lineage-64 |
 |-----:|:---------------------------------------|----------:|------------:|-------------:|-------------:|-------------:|
 |    1 | perplexity/r1-1776                     |     0.934 |       0.965 |        0.985 |        0.935 |        0.850 |
 |    2 | openai/o1                              |     0.921 |       1.000 |        0.980 |        0.925 |        0.780 |
