@@ -177,6 +177,8 @@ options:
 
 ### run_openrouter.py
 
+Before running `run_openrouter.py` set OPENROUTER_API_KEY environment variable to your OpenRouter API Key.
+
 ```
 usage: run_openrouter.py [-h] -m MODEL [-p PROVIDER] [-e EFFORT] [-t THREADS] [-v] [-s [SYSTEM_PROMPT]]
 
