@@ -3,6 +3,8 @@ Testing LLM reasoning abilities with lineage relationship quizzes.
 
 The project is a successor of the [farel-bench](https://github.com/fairydreaming/farel-bench) benchmark.
 
+**Note: due to the high cost of benchmark runs the project is currently put on hiatus.**
+
 ## Changelog
 
 * 2024-03-07 - Added results for qwq-32b (used Parasail provider with 0.01 temp, observed some infinite loop generations, but mostly for lineage-64 where the model performs bad anyway).
