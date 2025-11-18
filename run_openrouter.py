@@ -13,23 +13,31 @@ from concurrent.futures import ThreadPoolExecutor
 DEFAULT_SYSTEM_PROMPT="You are a master of logical thinking. You carefully analyze the premises step by step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any question."
 
 parser = argparse.ArgumentParser()
+parser.add_argument("-u", "--url", help="OpenAI-compatible API URL", type=str, default="https://openrouter.ai/api/v1/chat/completions")
 parser.add_argument("-m", "--model", help="OpenRouter model name.", required=True)
 parser.add_argument("-p", "--provider", help="OpenRouter provider name.")
-parser.add_argument("-e", "--effort", help="Reasoning effort (o1 model only).")
+parser.add_argument("-r", "--reasoning", help="Enable reasoning.", action='store_true', default=False)
+parser.add_argument("-e", "--effort", help="Reasoning effort (recent OpenAI and xAI models support this).")
 parser.add_argument("-t", "--threads", help="Number of threads to use.", type=int, default=8)
 parser.add_argument("-v", "--verbose", help="Enable verbose output.", action="store_true")
 parser.add_argument("-s", "--system-prompt", help="Use given system prompt. By default, the system prompt is not used. When this option is passed without a value, the default system prompt value is used: " + repr(DEFAULT_SYSTEM_PROMPT), const=DEFAULT_SYSTEM_PROMPT, default=None, nargs='?')
 parser.add_argument("-T", "--temp", help="Temperature value to use.", type=float, default=0.01)
+parser.add_argument("-P", "--top-p", help="top_p sampling parameter.", type=float)
+parser.add_argument("-K", "--top-k", help="top_k sampling parameter.", type=float)
 parser.add_argument("-n", "--max-tokens", help="Max number of tokens to generate.", type=float, default=16384)
 args = parser.parse_args()
 model_name = args.model
 provider_name = args.provider
 system_prompt = args.system_prompt
+reasoning_enabled = args.reasoning
 reasoning_effort = args.effort
 num_threads = args.threads
 is_verbose = args.verbose
 temperature = args.temp
 max_tokens = args.max_tokens
+top_p = args.top_p
+top_k = args.top_k
+api_url = args.url
 
 quiz_reader = csv.reader(sys.stdin, delimiter=',', quotechar='"')
 csv_writer = csv.writer(sys.stdout)
@@ -40,6 +48,7 @@ def make_request(row):
     global system_prompt
     global reasoning_effort
     global api_key
+    global api_url
     global is_verbose
 
     problem_size, relation_name, correct_answer, quiz = row
@@ -65,9 +74,19 @@ def make_request(row):
     if provider_name:
         request_data["provider"] = { "order": [ provider_name ], "allow_fallbacks": False }
 
+    if reasoning_enabled:
+        request_data["reasoning"] = { "enabled": True }
+
     if reasoning_effort:
+        assert(reasoning_enabled)
         assert(reasoning_effort in ["low", "medium", "high"])
-        request_data["reasoning_effort"] = reasoning_effort
+        request_data["reasoning"]["effort"] = reasoning_effort
+
+    if top_p:
+        request_data["top_p"] = top_p
+
+    if top_k:
+        request_data["top_k"] = top_k
 
     if is_verbose:
         print(f"[{quiz_id}] Request: {request_data}", file=sys.stderr)
@@ -75,7 +94,7 @@ def make_request(row):
     while True:
         try:
             response = requests.post(
-                url = "https://openrouter.ai/api/v1/chat/completions",
+                url = api_url,
                 headers = { "Authorization": f"Bearer {api_key}" },
                 data=json.dumps(request_data),
             )
@@ -98,7 +117,15 @@ def make_request(row):
                 raise RuntimeError("Upstream server error")
 
             model_response = response_json["choices"][0]["message"]["content"]
-            provider_name = response_json["provider"]
+            if "reasoning" in response_json["choices"][0]["message"]:
+                model_reasoning = response_json["choices"][0]["message"]["reasoning"]
+            else:
+                model_reasoning = None
+
+            if "provider" in response_json:
+                provider_name = response_json["provider"]
+            else:
+                provider_name = None
             break
         except Exception as ex:
             print(f"[{quiz_id}] Caught exception: {ex}", file=sys.stderr)
@@ -107,7 +134,7 @@ def make_request(row):
 
     assert(response.status_code == 200)
 
-    return [problem_size, relation_name, correct_answer, quiz, model_name, provider_name, reasoning_effort, system_prompt, model_response]
+    return [problem_size, relation_name, correct_answer, quiz, model_name, provider_name, reasoning_effort, system_prompt, model_response, model_reasoning]
 
 with ThreadPoolExecutor(max_workers=num_threads) as executor:
     results = executor.map(make_request, quiz_reader)
