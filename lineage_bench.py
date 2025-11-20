@@ -134,8 +134,8 @@ def generate_quizzes(length, num_quizzes=10, prompt=DEFAULT_PROMPT, shuffle=Fals
     quiz_types = list(QuizType)
     # do not generate QuizType.OTHER quizes
     quiz_types.pop()
-    for quiz_type in quiz_types:
-        for i in range(num_quizzes):
+    for i in range(num_quizzes):
+        for quiz_type in quiz_types:
             quiz, correct_answer = generate_quiz(length, quiz_type, shuffle=shuffle, prompt=prompt)
             yield (str(quiz_type).removeprefix("QuizType."), correct_answer, quiz)
 
