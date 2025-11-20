@@ -8,13 +8,14 @@ import time
 import json
 import requests
 import hashlib
-from concurrent.futures import ThreadPoolExecutor
+from tqdm.contrib.concurrent import process_map
 
 DEFAULT_SYSTEM_PROMPT="You are a master of logical thinking. You carefully analyze the premises step by step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any question."
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-u", "--url", help="OpenAI-compatible API URL", type=str, default="https://openrouter.ai/api/v1/chat/completions")
 parser.add_argument("-m", "--model", help="OpenRouter model name.", required=True)
+parser.add_argument("-o", "--output", help="Directory for storing model responses.", required=True)
 parser.add_argument("-p", "--provider", help="OpenRouter provider name.")
 parser.add_argument("-r", "--reasoning", help="Enable reasoning.", action='store_true', default=False)
 parser.add_argument("-e", "--effort", help="Reasoning effort (recent OpenAI and xAI models support this).")
@@ -23,9 +24,11 @@ parser.add_argument("-v", "--verbose", help="Enable verbose output.", action="st
 parser.add_argument("-s", "--system-prompt", help="Use given system prompt. By default, the system prompt is not used. When this option is passed without a value, the default system prompt value is used: " + repr(DEFAULT_SYSTEM_PROMPT), const=DEFAULT_SYSTEM_PROMPT, default=None, nargs='?')
 parser.add_argument("-T", "--temp", help="Temperature value to use.", type=float, default=0.01)
 parser.add_argument("-P", "--top-p", help="top_p sampling parameter.", type=float)
-parser.add_argument("-K", "--top-k", help="top_k sampling parameter.", type=float)
+parser.add_argument("-K", "--top-k", help="top_k sampling parameter.", type=int)
 parser.add_argument("-n", "--max-tokens", help="Max number of tokens to generate.", type=float, default=16384)
+parser.add_argument("-i", "--retries", help="Max number of API request retries.", type=int, default=5)
 args = parser.parse_args()
+output_dir = args.output
 model_name = args.model
 provider_name = args.provider
 system_prompt = args.system_prompt
@@ -38,10 +41,14 @@ max_tokens = args.max_tokens
 top_p = args.top_p
 top_k = args.top_k
 api_url = args.url
+max_retries = args.retries
 
 quiz_reader = csv.reader(sys.stdin, delimiter=',', quotechar='"')
 csv_writer = csv.writer(sys.stdout)
 api_key = os.getenv("OPENROUTER_API_KEY")
+
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 
 def make_request(row):
     global provider_name
@@ -91,54 +98,75 @@ def make_request(row):
     if is_verbose:
         print(f"[{quiz_id}] Request: {request_data}", file=sys.stderr)
 
-    while True:
-        try:
-            response = requests.post(
-                url = api_url,
-                headers = { "Authorization": f"Bearer {api_key}" },
-                data=json.dumps(request_data),
-            )
+    request_json = json.dumps(request_data)
+    response_json = None
 
-            if is_verbose:
-                print(f"[{quiz_id}] Response status code: {response.status_code}", file=sys.stderr)
+    request_file_path = os.path.join(output_dir, f"{quiz_id}_request.json")
+    response_file_path = os.path.join(output_dir, f"{quiz_id}_response.json")
 
-            if is_verbose:
-                print(f"[{quiz_id}] Response: {response.text.strip()}", file=sys.stderr)
+    if os.path.exists(request_file_path) and os.path.exists(response_file_path):
+        # Skip API call if model response is already saved in a JSON file
+        if is_verbose:
+            print(f"{quiz_id} Skipping already answered quiz")
 
-            if response.status_code != 200:
-                raise RuntimeError(f"Response status code: {response.status_code}")
+        with open(response_file_path, "r") as f:
+            response_json = json.load(f)
+    else:
+        # Perform API call and store request/response in JSON files.
 
-            response_json = response.json()
+        for try_num in range(max_retries):
+            try:
+                response = requests.post(
+                    url = api_url,
+                    headers = { "Authorization": f"Bearer {api_key}" },
+                    data=json.dumps(request_data),
+                )
 
-            if "error" in response_json:
-                raise RuntimeError("Server error")
+                if is_verbose:
+                    print(f"[{quiz_id}] Response status code: {response.status_code}", file=sys.stderr)
 
-            if "error" in response_json["choices"][0]:
-                raise RuntimeError("Upstream server error")
+                if is_verbose:
+                    print(f"[{quiz_id}] Response: {response.text.strip()}", file=sys.stderr)
 
-            model_response = response_json["choices"][0]["message"]["content"]
-            if "reasoning" in response_json["choices"][0]["message"]:
-                model_reasoning = response_json["choices"][0]["message"]["reasoning"]
-            else:
-                model_reasoning = None
+                if response.status_code != 200:
+                    raise RuntimeError(f"Response status code: {response.status_code}")
 
-            if "provider" in response_json:
-                provider_name = response_json["provider"]
-            else:
-                provider_name = None
-            break
-        except Exception as ex:
-            print(f"[{quiz_id}] Caught exception: {ex}", file=sys.stderr)
-            time.sleep(60)
-            continue
+                response_json = response.json()
 
-    assert(response.status_code == 200)
+                if "error" in response_json:
+                    raise RuntimeError("Server error")
 
-    return [problem_size, relation_name, correct_answer, quiz, model_name, provider_name, reasoning_effort, system_prompt, model_response, model_reasoning]
+                if "error" in response_json["choices"][0]:
+                    raise RuntimeError("Upstream server error")
 
-with ThreadPoolExecutor(max_workers=num_threads) as executor:
-    results = executor.map(make_request, quiz_reader)
+                with open(request_file_path, "w") as f:
+                    f.write(request_json)
+                with open(response_file_path, "w") as f:
+                    f.write(response.text.strip())
+
+                break
+            except Exception as ex:
+                print(f"[{quiz_id}] Caught exception: {ex}", file=sys.stderr)
+                time.sleep(60)
+                continue
+
+    if not response_json:
+        return None
+
+    model_response = response_json["choices"][0]["message"]["content"]
+
+    if "provider" in response_json:
+        provider_name = response_json["provider"]
+    else:
+        provider_name = None
+
+    return [problem_size, relation_name, correct_answer, quiz, model_name, provider_name, reasoning_effort, system_prompt, model_response]
+
+results = process_map(make_request, list(quiz_reader), max_workers=num_threads)
 
 for result in results:
-    csv_writer.writerow(result)
+    if result:
+        csv_writer.writerow(result)
+
+print(f"Successfully generated {sum(1 for result in results if result)} of {len(results)} quiz solutions.", file=sys.stderr)
 
