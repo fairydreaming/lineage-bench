@@ -15,7 +15,7 @@ output_file = args.output
 df = pd.read_csv(sys.stdin)
 
 # Define category columns for stacking
-categories = col_names = df.columns[3:].values
+categories = col_names = df.columns[4:].values
 
 # Define bar positions and model names
 bar_positions = range(len(df))
@@ -25,7 +25,7 @@ model_names = df["model_name"]
 colors = ["yellowgreen", "gold", "orange", "tomato"]
 
 # Create stacked horizontal bar chart
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(10, 7))
 bottom = [0] * len(df)
 
 for idx, category in enumerate(categories):
