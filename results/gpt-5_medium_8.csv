@@ -1,0 +1,640 @@
+8,ANCESTOR,3,"Given the following lineage relationships:
+* Beverly is Gerald's ancestor.
+* Jeffrey is Richard's ancestor.
+* Richard is Beverly's ancestor.
+* Douglas is Stephen's ancestor.
+* Gerald is Jeremy's ancestor.
+* Andrea is Jeffrey's ancestor.
+* Jeremy is Douglas's ancestor.
+Determine the lineage relationship between Andrea and Stephen.
+Select the correct answer:
+1. Andrea and Stephen share a common ancestor.
+2. Andrea is Stephen's descendant.
+3. Andrea is Stephen's ancestor.
+4. Andrea and Stephen share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,DESCENDANT,3,"Given the following lineage relationships:
+* Benjamin is Frances's descendant.
+* Benjamin is Brittany's ancestor.
+* Diane is Carl's descendant.
+* Sarah is Willie's descendant.
+* Frances is Sarah's descendant.
+* Robert is Carl's ancestor.
+* Robert is Brittany's descendant.
+Determine the lineage relationship between Diane and Willie.
+Select the correct answer:
+1. Diane and Willie share a common ancestor.
+2. Diane and Willie share a common descendant.
+3. Diane is Willie's descendant.
+4. Diane is Willie's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,COMMON_ANCESTOR,4,"Given the following lineage relationships:
+* Mason is Maria's ancestor.
+* Mason is Kelly's descendant.
+* Alice is Jerry's descendant.
+* Kelly is Joan's descendant.
+* Joan is Lawrence's descendant.
+* Maria is Jerry's ancestor.
+* Christine is Lawrence's descendant.
+Determine the lineage relationship between Christine and Alice.
+Select the correct answer:
+1. Christine and Alice share a common descendant.
+2. Christine is Alice's descendant.
+3. Christine is Alice's ancestor.
+4. Christine and Alice share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Paul is Megan's descendant.
+* Jean is Ann's ancestor.
+* Judith is Alexander's ancestor.
+* Ruth is Judith's ancestor.
+* Ruth is Paul's descendant.
+* Alexander is Anna's descendant.
+* Megan is Ann's descendant.
+Determine the lineage relationship between Jean and Anna.
+Select the correct answer:
+1. Jean and Anna share a common ancestor.
+2. Jean is Anna's descendant.
+3. Jean and Anna share a common descendant.
+4. Jean is Anna's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,ANCESTOR,4,"Given the following lineage relationships:
+* Jacqueline is Nathan's descendant.
+* Larry is Emily's descendant.
+* Patricia is Hannah's ancestor.
+* Sharon is Patricia's ancestor.
+* Emily is Hannah's descendant.
+* Larry is Terry's ancestor.
+* Jacqueline is Sharon's ancestor.
+Determine the lineage relationship between Nathan and Terry.
+Select the correct answer:
+1. Nathan is Terry's descendant.
+2. Nathan and Terry share a common ancestor.
+3. Nathan and Terry share a common descendant.
+4. Nathan is Terry's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Steven is Philip's descendant.
+* Julie is Sarah's ancestor.
+* Michelle is Emma's descendant.
+* Bradley is Michelle's descendant.
+* Sarah is Ann's ancestor.
+* Philip is Bradley's descendant.
+* Steven is Julie's ancestor.
+Determine the lineage relationship between Ann and Emma.
+Select the correct answer:
+1. Ann is Emma's descendant.
+2. Ann is Emma's ancestor.
+3. Ann and Emma share a common descendant.
+4. Ann and Emma share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,COMMON_ANCESTOR,3,"Given the following lineage relationships:
+* Andrea is Jordan's descendant.
+* Ruth is Tyler's ancestor.
+* Jordan is Joan's ancestor.
+* Cynthia is Edward's descendant.
+* Ruth is Andrea's descendant.
+* Joan is Edward's ancestor.
+* Tyler is Brandon's ancestor.
+Determine the lineage relationship between Cynthia and Brandon.
+Select the correct answer:
+1. Cynthia and Brandon share a common descendant.
+2. Cynthia is Brandon's ancestor.
+3. Cynthia and Brandon share a common ancestor.
+4. Cynthia is Brandon's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Kevin is Danielle's ancestor.
+* Andrew is Stephanie's ancestor.
+* Kayla is Nicholas's descendant.
+* Stephanie is Danielle's descendant.
+* Brittany is Anna's descendant.
+* Andrew is Brittany's descendant.
+* Anna is Kayla's descendant.
+Determine the lineage relationship between Kevin and Nicholas.
+Select the correct answer:
+1. Kevin is Nicholas's descendant.
+2. Kevin and Nicholas share a common ancestor.
+3. Kevin and Nicholas share a common descendant.
+4. Kevin is Nicholas's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,ANCESTOR,3,"Given the following lineage relationships:
+* Christine is Diane's descendant.
+* William is Diane's ancestor.
+* Christine is Peter's ancestor.
+* William is Albert's descendant.
+* Robert is Zachary's descendant.
+* Peter is Zachary's ancestor.
+* Steven is Albert's ancestor.
+Determine the lineage relationship between Steven and Robert.
+Select the correct answer:
+1. Steven and Robert share a common ancestor.
+2. Steven is Robert's descendant.
+3. Steven is Robert's ancestor.
+4. Steven and Robert share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,DESCENDANT,2,"Given the following lineage relationships:
+* Timothy is Martha's descendant.
+* Timothy is Dennis's ancestor.
+* Barbara is Sarah's ancestor.
+* Randy is Lisa's ancestor.
+* Dennis is Elizabeth's ancestor.
+* Randy is Sarah's descendant.
+* Lisa is Martha's ancestor.
+Determine the lineage relationship between Elizabeth and Barbara.
+Select the correct answer:
+1. Elizabeth and Barbara share a common ancestor.
+2. Elizabeth is Barbara's descendant.
+3. Elizabeth is Barbara's ancestor.
+4. Elizabeth and Barbara share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,COMMON_ANCESTOR,2,"Given the following lineage relationships:
+* Joshua is Sandra's descendant.
+* Sandra is Katherine's descendant.
+* Ronald is Katherine's ancestor.
+* Walter is Joshua's descendant.
+* Ronald is Matthew's ancestor.
+* Walter is Donna's ancestor.
+* Cheryl is Matthew's descendant.
+Determine the lineage relationship between Donna and Cheryl.
+Select the correct answer:
+1. Donna and Cheryl share a common descendant.
+2. Donna and Cheryl share a common ancestor.
+3. Donna is Cheryl's descendant.
+4. Donna is Cheryl's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,COMMON_DESCENDANT,1,"Given the following lineage relationships:
+* Danielle is Frances's descendant.
+* Helen is Danielle's ancestor.
+* Kimberly is Dylan's ancestor.
+* Helen is Madison's descendant.
+* Sarah is Frances's ancestor.
+* Julia is Madison's ancestor.
+* Dylan is Sarah's ancestor.
+Determine the lineage relationship between Kimberly and Julia.
+Select the correct answer:
+1. Kimberly and Julia share a common descendant.
+2. Kimberly and Julia share a common ancestor.
+3. Kimberly is Julia's ancestor.
+4. Kimberly is Julia's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,ANCESTOR,1,"Given the following lineage relationships:
+* Catherine is Walter's descendant.
+* Noah is Linda's ancestor.
+* Jacob is Linda's descendant.
+* Jacob is Carolyn's ancestor.
+* Julie is Catherine's descendant.
+* Walter is Carolyn's descendant.
+* Sara is Noah's ancestor.
+Determine the lineage relationship between Sara and Julie.
+Select the correct answer:
+1. Sara is Julie's ancestor.
+2. Sara and Julie share a common descendant.
+3. Sara is Julie's descendant.
+4. Sara and Julie share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Ronald is Rachel's ancestor.
+* Theresa is Paul's descendant.
+* Emily is Christina's descendant.
+* Pamela is Ronald's ancestor.
+* John is Emily's descendant.
+* Christina is Rachel's descendant.
+* John is Paul's ancestor.
+Determine the lineage relationship between Theresa and Pamela.
+Select the correct answer:
+1. Theresa is Pamela's descendant.
+2. Theresa is Pamela's ancestor.
+3. Theresa and Pamela share a common descendant.
+4. Theresa and Pamela share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,COMMON_ANCESTOR,1,"Given the following lineage relationships:
+* Jonathan is Terry's descendant.
+* Charlotte is Edward's descendant.
+* Brandon is Sean's ancestor.
+* Christine is Brandon's ancestor.
+* Ryan is Edward's descendant.
+* Terry is Ryan's descendant.
+* Charlotte is Christine's ancestor.
+Determine the lineage relationship between Jonathan and Sean.
+Select the correct answer:
+1. Jonathan and Sean share a common ancestor.
+2. Jonathan and Sean share a common descendant.
+3. Jonathan is Sean's descendant.
+4. Jonathan is Sean's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,COMMON_DESCENDANT,2,"Given the following lineage relationships:
+* Sandra is Beverly's descendant.
+* Sandra is Christine's ancestor.
+* Beverly is Samuel's descendant.
+* Terry is Samuel's ancestor.
+* Alice is Christine's ancestor.
+* Alice is Karen's descendant.
+* Terry is Andrea's descendant.
+Determine the lineage relationship between Andrea and Karen.
+Select the correct answer:
+1. Andrea and Karen share a common ancestor.
+2. Andrea and Karen share a common descendant.
+3. Andrea is Karen's descendant.
+4. Andrea is Karen's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,ANCESTOR,2,"Given the following lineage relationships:
+* Randy is Jason's descendant.
+* Teresa is Jason's ancestor.
+* Ann is Walter's ancestor.
+* Elizabeth is Debra's descendant.
+* Teresa is Walter's descendant.
+* Marie is Debra's ancestor.
+* Marie is Randy's descendant.
+Determine the lineage relationship between Ann and Elizabeth.
+Select the correct answer:
+1. Ann and Elizabeth share a common descendant.
+2. Ann is Elizabeth's ancestor.
+3. Ann and Elizabeth share a common ancestor.
+4. Ann is Elizabeth's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Aaron is Emily's descendant.
+* Zachary is Aaron's descendant.
+* Carol is Zachary's descendant.
+* Christopher is Bradley's ancestor.
+* Emily is Wayne's descendant.
+* Christopher is Carol's descendant.
+* Wayne is Bryan's descendant.
+Determine the lineage relationship between Bradley and Bryan.
+Select the correct answer:
+1. Bradley is Bryan's descendant.
+2. Bradley and Bryan share a common descendant.
+3. Bradley is Bryan's ancestor.
+4. Bradley and Bryan share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,COMMON_ANCESTOR,3,"Given the following lineage relationships:
+* Nancy is Julie's descendant.
+* Christopher is Edward's ancestor.
+* Frank is Catherine's descendant.
+* Frank is Roger's ancestor.
+* Terry is Christopher's ancestor.
+* Catherine is Terry's descendant.
+* Julie is Edward's descendant.
+Determine the lineage relationship between Roger and Nancy.
+Select the correct answer:
+1. Roger and Nancy share a common descendant.
+2. Roger is Nancy's descendant.
+3. Roger and Nancy share a common ancestor.
+4. Roger is Nancy's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,COMMON_DESCENDANT,1,"Given the following lineage relationships:
+* Bruce is Madison's ancestor.
+* Bruce is Christina's descendant.
+* Jordan is Grace's descendant.
+* Jordan is Cynthia's ancestor.
+* Cynthia is Billy's descendant.
+* Gary is Madison's descendant.
+* Gary is Grace's ancestor.
+Determine the lineage relationship between Christina and Billy.
+Select the correct answer:
+1. Christina and Billy share a common descendant.
+2. Christina is Billy's ancestor.
+3. Christina is Billy's descendant.
+4. Christina and Billy share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,ANCESTOR,3,"Given the following lineage relationships:
+* Sandra is Michelle's descendant.
+* Catherine is Lisa's descendant.
+* Ruth is Jacqueline's ancestor.
+* Sandra is Sara's ancestor.
+* Joe is Jacqueline's descendant.
+* Joe is Michelle's ancestor.
+* Catherine is Ruth's ancestor.
+Determine the lineage relationship between Lisa and Sara.
+Select the correct answer:
+1. Lisa and Sara share a common descendant.
+2. Lisa and Sara share a common ancestor.
+3. Lisa is Sara's ancestor.
+4. Lisa is Sara's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Kayla is Virginia's ancestor.
+* Amanda is Jeremy's ancestor.
+* Susan is Kimberly's ancestor.
+* Susan is Evelyn's descendant.
+* Paul is Kayla's ancestor.
+* Virginia is Amanda's ancestor.
+* Paul is Kimberly's descendant.
+Determine the lineage relationship between Jeremy and Evelyn.
+Select the correct answer:
+1. Jeremy is Evelyn's descendant.
+2. Jeremy and Evelyn share a common descendant.
+3. Jeremy and Evelyn share a common ancestor.
+4. Jeremy is Evelyn's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,COMMON_ANCESTOR,2,"Given the following lineage relationships:
+* Kimberly is Gary's ancestor.
+* Kimberly is Jonathan's descendant.
+* Jonathan is Donna's descendant.
+* Debra is Emma's descendant.
+* Teresa is Emma's ancestor.
+* Teresa is Donna's descendant.
+* Julie is Debra's descendant.
+Determine the lineage relationship between Gary and Julie.
+Select the correct answer:
+1. Gary is Julie's ancestor.
+2. Gary and Julie share a common ancestor.
+3. Gary and Julie share a common descendant.
+4. Gary is Julie's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Juan is Sean's ancestor.
+* Joshua is Isabella's ancestor.
+* Dylan is Noah's descendant.
+* Noah is Sean's descendant.
+* Juan is Gabriel's descendant.
+* Gabriel is Nicole's descendant.
+* Isabella is Dylan's descendant.
+Determine the lineage relationship between Joshua and Nicole.
+Select the correct answer:
+1. Joshua and Nicole share a common ancestor.
+2. Joshua is Nicole's descendant.
+3. Joshua and Nicole share a common descendant.
+4. Joshua is Nicole's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,ANCESTOR,1,"Given the following lineage relationships:
+* Doris is Maria's ancestor.
+* Bradley is Maria's descendant.
+* Alexis is Heather's ancestor.
+* Doris is William's descendant.
+* Frances is Heather's descendant.
+* Alexis is Eugene's descendant.
+* Frances is William's ancestor.
+Determine the lineage relationship between Eugene and Bradley.
+Select the correct answer:
+1. Eugene is Bradley's ancestor.
+2. Eugene and Bradley share a common ancestor.
+3. Eugene is Bradley's descendant.
+4. Eugene and Bradley share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,DESCENDANT,4,"Given the following lineage relationships:
+* Christina is Nicholas's ancestor.
+* Gregory is Michelle's descendant.
+* Nicholas is Michelle's ancestor.
+* Richard is Anna's ancestor.
+* Amber is Gregory's descendant.
+* Richard is Mary's descendant.
+* Christina is Anna's descendant.
+Determine the lineage relationship between Amber and Mary.
+Select the correct answer:
+1. Amber is Mary's ancestor.
+2. Amber and Mary share a common ancestor.
+3. Amber and Mary share a common descendant.
+4. Amber is Mary's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>
+8,COMMON_ANCESTOR,1,"Given the following lineage relationships:
+* Carl is Bradley's ancestor.
+* Theresa is Carl's ancestor.
+* Bradley is Brittany's ancestor.
+* Christian is Kenneth's ancestor.
+* Theresa is Jessica's ancestor.
+* Jessica is Christian's ancestor.
+* Brittany is Albert's ancestor.
+Determine the lineage relationship between Albert and Kenneth.
+Select the correct answer:
+1. Albert and Kenneth share a common ancestor.
+2. Albert and Kenneth share a common descendant.
+3. Albert is Kenneth's ancestor.
+4. Albert is Kenneth's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,COMMON_DESCENDANT,2,"Given the following lineage relationships:
+* Rachel is Henry's ancestor.
+* Kayla is Keith's ancestor.
+* Henry is Michelle's descendant.
+* Ryan is Gloria's descendant.
+* Jean is Keith's descendant.
+* Jean is Michelle's ancestor.
+* Ryan is Rachel's ancestor.
+Determine the lineage relationship between Gloria and Kayla.
+Select the correct answer:
+1. Gloria and Kayla share a common ancestor.
+2. Gloria and Kayla share a common descendant.
+3. Gloria is Kayla's ancestor.
+4. Gloria is Kayla's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,ANCESTOR,1,"Given the following lineage relationships:
+* Charles is Rachel's descendant.
+* Joyce is Jacob's ancestor.
+* Elijah is Charles's descendant.
+* Karen is Anna's descendant.
+* Joyce is Kathryn's descendant.
+* Jacob is Rachel's ancestor.
+* Anna is Elijah's descendant.
+Determine the lineage relationship between Kathryn and Karen.
+Select the correct answer:
+1. Kathryn is Karen's ancestor.
+2. Kathryn and Karen share a common descendant.
+3. Kathryn and Karen share a common ancestor.
+4. Kathryn is Karen's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,DESCENDANT,4,"Given the following lineage relationships:
+* Michelle is Deborah's ancestor.
+* Nancy is Danielle's descendant.
+* Michelle is Nancy's descendant.
+* Lauren is Pamela's descendant.
+* Lori is Pamela's ancestor.
+* Danielle is Olivia's descendant.
+* Lori is Deborah's descendant.
+Determine the lineage relationship between Lauren and Olivia.
+Select the correct answer:
+1. Lauren and Olivia share a common ancestor.
+2. Lauren is Olivia's ancestor.
+3. Lauren and Olivia share a common descendant.
+4. Lauren is Olivia's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>
+8,COMMON_ANCESTOR,4,"Given the following lineage relationships:
+* Helen is Gerald's descendant.
+* Carl is Julie's ancestor.
+* Carl is Willie's descendant.
+* Gerald is Jean's descendant.
+* Randy is Roger's descendant.
+* Roger is Willie's ancestor.
+* Julie is Jean's ancestor.
+Determine the lineage relationship between Randy and Helen.
+Select the correct answer:
+1. Randy and Helen share a common descendant.
+2. Randy is Helen's descendant.
+3. Randy is Helen's ancestor.
+4. Randy and Helen share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>
+8,COMMON_DESCENDANT,2,"Given the following lineage relationships:
+* Jeremy is Sophia's descendant.
+* Ralph is Amanda's descendant.
+* Bryan is Jeremy's descendant.
+* Christine is Amanda's ancestor.
+* Catherine is Ralph's ancestor.
+* Madison is Catherine's ancestor.
+* Madison is Bryan's descendant.
+Determine the lineage relationship between Sophia and Christine.
+Select the correct answer:
+1. Sophia is Christine's descendant.
+2. Sophia and Christine share a common descendant.
+3. Sophia and Christine share a common ancestor.
+4. Sophia is Christine's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,ANCESTOR,4,"Given the following lineage relationships:
+* Amber is Diane's ancestor.
+* Beverly is Henry's descendant.
+* Deborah is Gerald's ancestor.
+* Henry is Jerry's descendant.
+* Beverly is Deborah's ancestor.
+* Diane is Brittany's ancestor.
+* Amber is Gerald's descendant.
+Determine the lineage relationship between Jerry and Brittany.
+Select the correct answer:
+1. Jerry and Brittany share a common ancestor.
+2. Jerry is Brittany's descendant.
+3. Jerry and Brittany share a common descendant.
+4. Jerry is Brittany's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Janet is Michael's ancestor.
+* Frances is Nicholas's descendant.
+* Nicholas is Andrea's descendant.
+* Jason is Dorothy's ancestor.
+* Michael is Jason's ancestor.
+* Theresa is Dorothy's descendant.
+* Andrea is Theresa's descendant.
+Determine the lineage relationship between Frances and Janet.
+Select the correct answer:
+1. Frances is Janet's descendant.
+2. Frances and Janet share a common descendant.
+3. Frances and Janet share a common ancestor.
+4. Frances is Janet's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>1</ANSWER>
+8,COMMON_ANCESTOR,3,"Given the following lineage relationships:
+* Scott is Rachel's descendant.
+* Kevin is Walter's descendant.
+* Jesse is Kevin's descendant.
+* Rachel is Jesse's descendant.
+* Helen is Jacob's descendant.
+* Helen is Doris's ancestor.
+* Walter is Jacob's ancestor.
+Determine the lineage relationship between Scott and Doris.
+Select the correct answer:
+1. Scott and Doris share a common descendant.
+2. Scott is Doris's ancestor.
+3. Scott and Doris share a common ancestor.
+4. Scott is Doris's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Benjamin is Kenneth's ancestor.
+* Christine is Joshua's descendant.
+* Kenneth is Madison's descendant.
+* Ethan is Patrick's descendant.
+* Christine is Patrick's ancestor.
+* Ethan is Benjamin's ancestor.
+* Madison is Terry's descendant.
+Determine the lineage relationship between Terry and Joshua.
+Select the correct answer:
+1. Terry and Joshua share a common ancestor.
+2. Terry is Joshua's ancestor.
+3. Terry and Joshua share a common descendant.
+4. Terry is Joshua's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,ANCESTOR,4,"Given the following lineage relationships:
+* Austin is Scott's descendant.
+* Douglas is Samantha's descendant.
+* Donald is Paul's descendant.
+* Paul is Larry's descendant.
+* Larry is Austin's descendant.
+* Scott is Megan's descendant.
+* Douglas is Megan's ancestor.
+Determine the lineage relationship between Samantha and Donald.
+Select the correct answer:
+1. Samantha and Donald share a common descendant.
+2. Samantha and Donald share a common ancestor.
+3. Samantha is Donald's descendant.
+4. Samantha is Donald's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>
+8,DESCENDANT,3,"Given the following lineage relationships:
+* Peter is Sara's descendant.
+* Christian is Richard's descendant.
+* Peter is George's ancestor.
+* Maria is Diane's descendant.
+* Richard is George's descendant.
+* Maria is Sara's ancestor.
+* Victoria is Christian's descendant.
+Determine the lineage relationship between Victoria and Diane.
+Select the correct answer:
+1. Victoria is Diane's ancestor.
+2. Victoria and Diane share a common descendant.
+3. Victoria is Diane's descendant.
+4. Victoria and Diane share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>3</ANSWER>
+8,COMMON_ANCESTOR,2,"Given the following lineage relationships:
+* Jason is Samuel's descendant.
+* Rebecca is Sophia's descendant.
+* Gloria is Jason's descendant.
+* Gloria is Joe's ancestor.
+* Barbara is Alan's descendant.
+* Samuel is Alan's ancestor.
+* Sophia is Barbara's descendant.
+Determine the lineage relationship between Joe and Rebecca.
+Select the correct answer:
+1. Joe is Rebecca's descendant.
+2. Joe and Rebecca share a common ancestor.
+3. Joe is Rebecca's ancestor.
+4. Joe and Rebecca share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>2</ANSWER>
+8,COMMON_DESCENDANT,4,"Given the following lineage relationships:
+* Mason is Angela's descendant.
+* Sandra is Joan's ancestor.
+* Sharon is Diana's ancestor.
+* Brittany is Sandra's ancestor.
+* Joan is Sharon's ancestor.
+* Christina is Diana's descendant.
+* Christina is Mason's ancestor.
+Determine the lineage relationship between Angela and Brittany.
+Select the correct answer:
+1. Angela is Brittany's descendant.
+2. Angela and Brittany share a common ancestor.
+3. Angela is Brittany's ancestor.
+4. Angela and Brittany share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",openai/gpt-5,OpenAI,medium,,<ANSWER>4</ANSWER>

@@ -1,0 +1,867 @@
+8,ANCESTOR,3,"Given the following lineage relationships:
+* Beverly is Gerald's ancestor.
+* Jeffrey is Richard's ancestor.
+* Richard is Beverly's ancestor.
+* Douglas is Stephen's ancestor.
+* Gerald is Jeremy's ancestor.
+* Andrea is Jeffrey's ancestor.
+* Jeremy is Douglas's ancestor.
+Determine the lineage relationship between Andrea and Stephen.
+Select the correct answer:
+1. Andrea and Stephen share a common ancestor.
+2. Andrea is Stephen's descendant.
+3. Andrea is Stephen's ancestor.
+4. Andrea and Stephen share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can trace the ancestry from Andrea to Stephen as follows:
+- Andrea is Jeffrey's ancestor (from point 6).
+- Jeffrey is Richard's ancestor (from point 2).
+- Richard is Beverly's ancestor (from point 3).
+- Beverly is Gerald's ancestor (from point 1).
+- Gerald is Jeremy's ancestor (from point 5).
+- Jeremy is Douglas's ancestor (from point 7).
+- Douglas is Stephen's ancestor (from point 4).
+
+This chain shows that Andrea is an ancestor of Stephen. Therefore, the correct relationship is that Andrea is Stephen's ancestor.
+
+<ANSWER>3</ANSWER>"
+8,DESCENDANT,3,"Given the following lineage relationships:
+* Benjamin is Frances's descendant.
+* Benjamin is Brittany's ancestor.
+* Diane is Carl's descendant.
+* Sarah is Willie's descendant.
+* Frances is Sarah's descendant.
+* Robert is Carl's ancestor.
+* Robert is Brittany's descendant.
+Determine the lineage relationship between Diane and Willie.
+Select the correct answer:
+1. Diane and Willie share a common ancestor.
+2. Diane and Willie share a common descendant.
+3. Diane is Willie's descendant.
+4. Diane is Willie's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can trace the path from Willie to Diane as follows: Willie is an ancestor of Sarah (from statement 4), Sarah is an ancestor of Frances (from statement 5), Frances is an ancestor of Benjamin (from statement 1), Benjamin is an ancestor of Brittany (from statement 2), Brittany is an ancestor of Robert (from statement 7), Robert is an ancestor of Carl (from statement 6), and Carl is an ancestor of Diane (from statement 3). Therefore, Diane is Willie's descendant.
+
+The correct answer is option 3.
+
+<ANSWER>3</ANSWER>"
+8,COMMON_ANCESTOR,4,"Given the following lineage relationships:
+* Mason is Maria's ancestor.
+* Mason is Kelly's descendant.
+* Alice is Jerry's descendant.
+* Kelly is Joan's descendant.
+* Joan is Lawrence's descendant.
+* Maria is Jerry's ancestor.
+* Christine is Lawrence's descendant.
+Determine the lineage relationship between Christine and Alice.
+Select the correct answer:
+1. Christine and Alice share a common descendant.
+2. Christine is Alice's descendant.
+3. Christine is Alice's ancestor.
+4. Christine and Alice share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, both Christine and Alice are descendants of Lawrence. Christine is directly stated to be Lawrence's descendant, and Alice is Lawrence's descendant through the chain: Lawrence → Joan → Kelly → Mason → Maria → Jerry → Alice. Therefore, Christine and Alice share a common ancestor, which is Lawrence.
+
+The other options are incorrect because:
+- Option 1 suggests they share a common descendant, but no information is given about their descendants.
+- Option 2 suggests Christine is Alice's descendant, but there is no direct lineage established from Alice to Christine.
+- Option 3 suggests Christine is Alice's ancestor, but there is no direct lineage established from Christine to Alice.
+- Option 5 is incorrect since option 4 is valid.
+
+<ANSWER>4</ANSWER>"
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Paul is Megan's descendant.
+* Jean is Ann's ancestor.
+* Judith is Alexander's ancestor.
+* Ruth is Judith's ancestor.
+* Ruth is Paul's descendant.
+* Alexander is Anna's descendant.
+* Megan is Ann's descendant.
+Determine the lineage relationship between Jean and Anna.
+Select the correct answer:
+1. Jean and Anna share a common ancestor.
+2. Jean is Anna's descendant.
+3. Jean and Anna share a common descendant.
+4. Jean is Anna's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Anna is an ancestor of Alexander (from point 6), and Alexander is part of a descendant chain from Jean: Jean is an ancestor of Ann (point 2), Ann is an ancestor of Megan (point 7), Megan is an ancestor of Paul (point 1), Paul is an ancestor of Ruth (point 5), Ruth is an ancestor of Judith (point 4), and Judith is an ancestor of Alexander (point 3). Since Anna is not included in this chain and is an ancestor of Alexander, Anna must be an ancestor of Jean. Therefore, Jean is Anna's descendant.
+
+<ANSWER>2</ANSWER>"
+8,ANCESTOR,4,"Given the following lineage relationships:
+* Jacqueline is Nathan's descendant.
+* Larry is Emily's descendant.
+* Patricia is Hannah's ancestor.
+* Sharon is Patricia's ancestor.
+* Emily is Hannah's descendant.
+* Larry is Terry's ancestor.
+* Jacqueline is Sharon's ancestor.
+Determine the lineage relationship between Nathan and Terry.
+Select the correct answer:
+1. Nathan is Terry's descendant.
+2. Nathan and Terry share a common ancestor.
+3. Nathan and Terry share a common descendant.
+4. Nathan is Terry's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Nathan is an ancestor of Jacqueline, who is an ancestor of Sharon, who is an ancestor of Patricia, who is an ancestor of Hannah, who is an ancestor of Emily, who is an ancestor of Larry, who is an ancestor of Terry. Therefore, Nathan is an ancestor of Terry.
+
+The correct answer is option 4.
+
+<ANSWER>4</ANSWER>"
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Steven is Philip's descendant.
+* Julie is Sarah's ancestor.
+* Michelle is Emma's descendant.
+* Bradley is Michelle's descendant.
+* Sarah is Ann's ancestor.
+* Philip is Bradley's descendant.
+* Steven is Julie's ancestor.
+Determine the lineage relationship between Ann and Emma.
+Select the correct answer:
+1. Ann is Emma's descendant.
+2. Ann is Emma's ancestor.
+3. Ann and Emma share a common descendant.
+4. Ann and Emma share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, the following chain can be derived: Emma → Michelle → Bradley → Philip → Steven → Julie → Sarah → Ann. This shows that Emma is an ancestor of Ann, meaning Ann is Emma's descendant. Therefore, the correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,COMMON_ANCESTOR,3,"Given the following lineage relationships:
+* Andrea is Jordan's descendant.
+* Ruth is Tyler's ancestor.
+* Jordan is Joan's ancestor.
+* Cynthia is Edward's descendant.
+* Ruth is Andrea's descendant.
+* Joan is Edward's ancestor.
+* Tyler is Brandon's ancestor.
+Determine the lineage relationship between Cynthia and Brandon.
+Select the correct answer:
+1. Cynthia and Brandon share a common descendant.
+2. Cynthia is Brandon's ancestor.
+3. Cynthia and Brandon share a common ancestor.
+4. Cynthia is Brandon's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chains:
+
+- Jordan is an ancestor of Andrea (from statement 1).
+- Andrea is an ancestor of Ruth (from statement 5).
+- Ruth is an ancestor of Tyler (from statement 2).
+- Tyler is an ancestor of Brandon (from statement 7).
+
+Thus, Jordan → Andrea → Ruth → Tyler → Brandon.
+
+Additionally:
+- Jordan is an ancestor of Joan (from statement 3).
+- Joan is an ancestor of Edward (from statement 6).
+- Edward is an ancestor of Cynthia (from statement 4).
+
+Thus, Jordan → Joan → Edward → Cynthia.
+
+Both Cynthia and Brandon are descendants of Jordan, meaning they share a common ancestor. Therefore, option 3 is correct.
+
+<ANSWER>3</ANSWER>"
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Kevin is Danielle's ancestor.
+* Andrew is Stephanie's ancestor.
+* Kayla is Nicholas's descendant.
+* Stephanie is Danielle's descendant.
+* Brittany is Anna's descendant.
+* Andrew is Brittany's descendant.
+* Anna is Kayla's descendant.
+Determine the lineage relationship between Kevin and Nicholas.
+Select the correct answer:
+1. Kevin is Nicholas's descendant.
+2. Kevin and Nicholas share a common ancestor.
+3. Kevin and Nicholas share a common descendant.
+4. Kevin is Nicholas's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,<ANSWER>3</ANSWER>
+8,ANCESTOR,3,"Given the following lineage relationships:
+* Christine is Diane's descendant.
+* William is Diane's ancestor.
+* Christine is Peter's ancestor.
+* William is Albert's descendant.
+* Robert is Zachary's descendant.
+* Peter is Zachary's ancestor.
+* Steven is Albert's ancestor.
+Determine the lineage relationship between Steven and Robert.
+Select the correct answer:
+1. Steven and Robert share a common ancestor.
+2. Steven is Robert's descendant.
+3. Steven is Robert's ancestor.
+4. Steven and Robert share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,<ANSWER>3</ANSWER>
+8,DESCENDANT,2,"Given the following lineage relationships:
+* Timothy is Martha's descendant.
+* Timothy is Dennis's ancestor.
+* Barbara is Sarah's ancestor.
+* Randy is Lisa's ancestor.
+* Dennis is Elizabeth's ancestor.
+* Randy is Sarah's descendant.
+* Lisa is Martha's ancestor.
+Determine the lineage relationship between Elizabeth and Barbara.
+Select the correct answer:
+1. Elizabeth and Barbara share a common ancestor.
+2. Elizabeth is Barbara's descendant.
+3. Elizabeth is Barbara's ancestor.
+4. Elizabeth and Barbara share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, the analysis shows that Barbara is an ancestor of Elizabeth. Therefore, Elizabeth is Barbara's descendant.
+
+<ANSWER>2</ANSWER>"
+8,COMMON_ANCESTOR,2,"Given the following lineage relationships:
+* Joshua is Sandra's descendant.
+* Sandra is Katherine's descendant.
+* Ronald is Katherine's ancestor.
+* Walter is Joshua's descendant.
+* Ronald is Matthew's ancestor.
+* Walter is Donna's ancestor.
+* Cheryl is Matthew's descendant.
+Determine the lineage relationship between Donna and Cheryl.
+Select the correct answer:
+1. Donna and Cheryl share a common descendant.
+2. Donna and Cheryl share a common ancestor.
+3. Donna is Cheryl's descendant.
+4. Donna is Cheryl's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can trace the ancestry of Donna and Cheryl. Both Donna and Cheryl are descendants of Ronald. Donna is descended from Ronald through Katherine, Sandra, Joshua, and Walter. Cheryl is descended from Ronald through Matthew. Therefore, Donna and Cheryl share a common ancestor, which is Ronald.
+
+The correct answer is option 2.
+
+<ANSWER>2</ANSWER>"
+8,COMMON_DESCENDANT,1,"Given the following lineage relationships:
+* Danielle is Frances's descendant.
+* Helen is Danielle's ancestor.
+* Kimberly is Dylan's ancestor.
+* Helen is Madison's descendant.
+* Sarah is Frances's ancestor.
+* Julia is Madison's ancestor.
+* Dylan is Sarah's ancestor.
+Determine the lineage relationship between Kimberly and Julia.
+Select the correct answer:
+1. Kimberly and Julia share a common descendant.
+2. Kimberly and Julia share a common ancestor.
+3. Kimberly is Julia's ancestor.
+4. Kimberly is Julia's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chains:
+
+- Kimberly is Dylan's ancestor, Dylan is Sarah's ancestor, Sarah is Frances's ancestor, and Frances is Danielle's ancestor. Thus, Kimberly is an ancestor of Danielle.
+
+- Julia is Madison's ancestor, Madison is Helen's ancestor, and Helen is Danielle's ancestor. Thus, Julia is an ancestor of Danielle.
+
+Therefore, both Kimberly and Julia are ancestors of Danielle, meaning they share a common descendant in Danielle.
+
+The correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,ANCESTOR,1,"Given the following lineage relationships:
+* Catherine is Walter's descendant.
+* Noah is Linda's ancestor.
+* Jacob is Linda's descendant.
+* Jacob is Carolyn's ancestor.
+* Julie is Catherine's descendant.
+* Walter is Carolyn's descendant.
+* Sara is Noah's ancestor.
+Determine the lineage relationship between Sara and Julie.
+Select the correct answer:
+1. Sara is Julie's ancestor.
+2. Sara and Julie share a common descendant.
+3. Sara is Julie's descendant.
+4. Sara and Julie share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Sara is Noah's ancestor, Noah is Linda's ancestor, Linda is Jacob's ancestor, Jacob is Carolyn's ancestor, Carolyn is Walter's ancestor, Walter is Catherine's ancestor, and Catherine is Julie's ancestor. Therefore, Sara is an ancestor of Julie.
+
+The correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Ronald is Rachel's ancestor.
+* Theresa is Paul's descendant.
+* Emily is Christina's descendant.
+* Pamela is Ronald's ancestor.
+* John is Emily's descendant.
+* Christina is Rachel's descendant.
+* John is Paul's ancestor.
+Determine the lineage relationship between Theresa and Pamela.
+Select the correct answer:
+1. Theresa is Pamela's descendant.
+2. Theresa is Pamela's ancestor.
+3. Theresa and Pamela share a common descendant.
+4. Theresa and Pamela share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Pamela is Ronald's ancestor, Ronald is Rachel's ancestor, Rachel is Christina's ancestor, Christina is Emily's ancestor, Emily is John's ancestor, John is Paul's ancestor, and Paul is Theresa's ancestor. Therefore, Pamela is an ancestor of Theresa, meaning Theresa is Pamela's descendant.
+
+The correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,COMMON_ANCESTOR,1,"Given the following lineage relationships:
+* Jonathan is Terry's descendant.
+* Charlotte is Edward's descendant.
+* Brandon is Sean's ancestor.
+* Christine is Brandon's ancestor.
+* Ryan is Edward's descendant.
+* Terry is Ryan's descendant.
+* Charlotte is Christine's ancestor.
+Determine the lineage relationship between Jonathan and Sean.
+Select the correct answer:
+1. Jonathan and Sean share a common ancestor.
+2. Jonathan and Sean share a common descendant.
+3. Jonathan is Sean's descendant.
+4. Jonathan is Sean's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, both Jonathan and Sean are descendants of Edward. Jonathan is descended from Edward through Ryan and Terry, while Sean is descended from Edward through Charlotte, Christine, and Brandon. Therefore, Jonathan and Sean share a common ancestor, which is Edward.
+
+<ANSWER>1</ANSWER>"
+8,COMMON_DESCENDANT,2,"Given the following lineage relationships:
+* Sandra is Beverly's descendant.
+* Sandra is Christine's ancestor.
+* Beverly is Samuel's descendant.
+* Terry is Samuel's ancestor.
+* Alice is Christine's ancestor.
+* Alice is Karen's descendant.
+* Terry is Andrea's descendant.
+Determine the lineage relationship between Andrea and Karen.
+Select the correct answer:
+1. Andrea and Karen share a common ancestor.
+2. Andrea and Karen share a common descendant.
+3. Andrea is Karen's descendant.
+4. Andrea is Karen's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chains:
+
+- Andrea is an ancestor of Terry (from ""Terry is Andrea's descendant"").
+- Terry is an ancestor of Samuel (from ""Terry is Samuel's ancestor"").
+- Samuel is an ancestor of Beverly (from ""Beverly is Samuel's descendant"").
+- Beverly is an ancestor of Sandra (from ""Sandra is Beverly's descendant"").
+- Sandra is an ancestor of Christine (from ""Sandra is Christine's ancestor"").
+
+Thus, Andrea is an ancestor of Christine.
+
+Similarly:
+- Karen is an ancestor of Alice (from ""Alice is Karen's descendant"").
+- Alice is an ancestor of Christine (from ""Alice is Christine's ancestor"").
+
+Thus, Karen is an ancestor of Christine.
+
+Therefore, both Andrea and Karen are ancestors of Christine, meaning they share a common descendant (Christine).
+
+The correct answer is option 2.
+
+<ANSWER>2</ANSWER>"
+8,ANCESTOR,2,"Given the following lineage relationships:
+* Randy is Jason's descendant.
+* Teresa is Jason's ancestor.
+* Ann is Walter's ancestor.
+* Elizabeth is Debra's descendant.
+* Teresa is Walter's descendant.
+* Marie is Debra's ancestor.
+* Marie is Randy's descendant.
+Determine the lineage relationship between Ann and Elizabeth.
+Select the correct answer:
+1. Ann and Elizabeth share a common descendant.
+2. Ann is Elizabeth's ancestor.
+3. Ann and Elizabeth share a common ancestor.
+4. Ann is Elizabeth's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Ann is Walter's ancestor (from statement 3), Walter is Teresa's ancestor (from statement 5), Teresa is Jason's ancestor (from statement 2), Jason is Randy's ancestor (from statement 1), Randy is Marie's ancestor (from statement 7), Marie is Debra's ancestor (from statement 6), and Debra is Elizabeth's ancestor (from statement 4). Thus, Ann is an ancestor of Elizabeth.
+
+Therefore, the correct relationship is that Ann is Elizabeth's ancestor, which corresponds to option 2.
+
+<ANSWER>2</ANSWER>"
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Aaron is Emily's descendant.
+* Zachary is Aaron's descendant.
+* Carol is Zachary's descendant.
+* Christopher is Bradley's ancestor.
+* Emily is Wayne's descendant.
+* Christopher is Carol's descendant.
+* Wayne is Bryan's descendant.
+Determine the lineage relationship between Bradley and Bryan.
+Select the correct answer:
+1. Bradley is Bryan's descendant.
+2. Bradley and Bryan share a common descendant.
+3. Bradley is Bryan's ancestor.
+4. Bradley and Bryan share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Bryan → Wayne → Emily → Aaron → Zachary → Carol → Christopher → Bradley. This shows that Bryan is an ancestor of Bradley, meaning Bradley is Bryan's descendant. Therefore, option 1 is correct.
+
+<ANSWER>1</ANSWER>"
+8,COMMON_ANCESTOR,3,"Given the following lineage relationships:
+* Nancy is Julie's descendant.
+* Christopher is Edward's ancestor.
+* Frank is Catherine's descendant.
+* Frank is Roger's ancestor.
+* Terry is Christopher's ancestor.
+* Catherine is Terry's descendant.
+* Julie is Edward's descendant.
+Determine the lineage relationship between Roger and Nancy.
+Select the correct answer:
+1. Roger and Nancy share a common descendant.
+2. Roger is Nancy's descendant.
+3. Roger and Nancy share a common ancestor.
+4. Roger is Nancy's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following family tree:
+
+- Terry is an ancestor of Christopher (from statement 5).
+- Christopher is an ancestor of Edward (from statement 2).
+- Edward is an ancestor of Julie (from statement 7).
+- Julie is an ancestor of Nancy (from statement 1). Thus, Terry → Christopher → Edward → Julie → Nancy.
+
+- Terry is also an ancestor of Catherine (from statement 6).
+- Catherine is an ancestor of Frank (from statement 3).
+- Frank is an ancestor of Roger (from statement 4). Thus, Terry → Catherine → Frank → Roger.
+
+Therefore, both Roger and Nancy are descendants of Terry, meaning they share a common ancestor (Terry). This corresponds to option 3.
+
+<ANSWER>3</ANSWER>"
+8,COMMON_DESCENDANT,1,"Given the following lineage relationships:
+* Bruce is Madison's ancestor.
+* Bruce is Christina's descendant.
+* Jordan is Grace's descendant.
+* Jordan is Cynthia's ancestor.
+* Cynthia is Billy's descendant.
+* Gary is Madison's descendant.
+* Gary is Grace's ancestor.
+Determine the lineage relationship between Christina and Billy.
+Select the correct answer:
+1. Christina and Billy share a common descendant.
+2. Christina is Billy's ancestor.
+3. Christina is Billy's descendant.
+4. Christina and Billy share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Christina is an ancestor of Bruce, who is an ancestor of Madison, who is an ancestor of Gary, who is an ancestor of Grace, who is an ancestor of Jordan, who is an ancestor of Cynthia. Additionally, Cynthia is a descendant of Billy. Therefore, Cynthia is a common descendant of both Christina and Billy. This confirms that Christina and Billy share a common descendant.
+
+The other options are not necessarily true:
+- Option 2 (Christina is Billy's ancestor) cannot be determined because Billy may be an ancestor of Christina or they may be unrelated except through Cynthia.
+- Option 3 (Christina is Billy's descendant) similarly cannot be determined.
+- Option 4 (Christina and Billy share a common ancestor) is not necessarily true, as they might not have a common ancestor based on the given information.
+- Option 5 (none of the above) is incorrect since option 1 is correct.
+
+Thus, the correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,ANCESTOR,3,"Given the following lineage relationships:
+* Sandra is Michelle's descendant.
+* Catherine is Lisa's descendant.
+* Ruth is Jacqueline's ancestor.
+* Sandra is Sara's ancestor.
+* Joe is Jacqueline's descendant.
+* Joe is Michelle's ancestor.
+* Catherine is Ruth's ancestor.
+Determine the lineage relationship between Lisa and Sara.
+Select the correct answer:
+1. Lisa and Sara share a common descendant.
+2. Lisa and Sara share a common ancestor.
+3. Lisa is Sara's ancestor.
+4. Lisa is Sara's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive a chain from Lisa to Sara: Lisa → Catherine → Ruth → Jacqueline → Joe → Michelle → Sandra → Sara. This indicates that Lisa is an ancestor of Sara. Therefore, the correct relationship is that Lisa is Sara's ancestor.
+
+<ANSWER>3</ANSWER>"
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Kayla is Virginia's ancestor.
+* Amanda is Jeremy's ancestor.
+* Susan is Kimberly's ancestor.
+* Susan is Evelyn's descendant.
+* Paul is Kayla's ancestor.
+* Virginia is Amanda's ancestor.
+* Paul is Kimberly's descendant.
+Determine the lineage relationship between Jeremy and Evelyn.
+Select the correct answer:
+1. Jeremy is Evelyn's descendant.
+2. Jeremy and Evelyn share a common descendant.
+3. Jeremy and Evelyn share a common ancestor.
+4. Jeremy is Evelyn's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Evelyn is an ancestor of Susan (from ""Susan is Evelyn's descendant""), Susan is an ancestor of Kimberly (from ""Susan is Kimberly's ancestor""), Kimberly is an ancestor of Paul (from ""Paul is Kimberly's descendant""), Paul is an ancestor of Kayla (from ""Paul is Kayla's ancestor""), Kayla is an ancestor of Virginia (from ""Kayla is Virginia's ancestor""), Virginia is an ancestor of Amanda (from ""Virginia is Amanda's ancestor""), and Amanda is an ancestor of Jeremy (from ""Amanda is Jeremy's ancestor""). Therefore, Evelyn is an ancestor of Jeremy, meaning Jeremy is Evelyn's descendant.
+
+<ANSWER>1</ANSWER>"
+8,COMMON_ANCESTOR,2,"Given the following lineage relationships:
+* Kimberly is Gary's ancestor.
+* Kimberly is Jonathan's descendant.
+* Jonathan is Donna's descendant.
+* Debra is Emma's descendant.
+* Teresa is Emma's ancestor.
+* Teresa is Donna's descendant.
+* Julie is Debra's descendant.
+Determine the lineage relationship between Gary and Julie.
+Select the correct answer:
+1. Gary is Julie's ancestor.
+2. Gary and Julie share a common ancestor.
+3. Gary and Julie share a common descendant.
+4. Gary is Julie's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chains:
+
+- Donna is an ancestor of Jonathan (from statement 3), Jonathan is an ancestor of Kimberly (from statement 2), and Kimberly is an ancestor of Gary (from statement 1). Thus, Donna → Jonathan → Kimberly → Gary.
+
+- Donna is an ancestor of Teresa (from statement 6), Teresa is an ancestor of Emma (from statement 5), Emma is an ancestor of Debra (from statement 4), and Debra is an ancestor of Julie (from statement 7). Thus, Donna → Teresa → Emma → Debra → Julie.
+
+Therefore, Gary and Julie both share Donna as a common ancestor. This corresponds to option 2.
+
+<ANSWER>2</ANSWER>"
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Juan is Sean's ancestor.
+* Joshua is Isabella's ancestor.
+* Dylan is Noah's descendant.
+* Noah is Sean's descendant.
+* Juan is Gabriel's descendant.
+* Gabriel is Nicole's descendant.
+* Isabella is Dylan's descendant.
+Determine the lineage relationship between Joshua and Nicole.
+Select the correct answer:
+1. Joshua and Nicole share a common ancestor.
+2. Joshua is Nicole's descendant.
+3. Joshua and Nicole share a common descendant.
+4. Joshua is Nicole's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive that both Joshua and Nicole are ancestors of Isabella. Joshua is directly stated to be Isabella's ancestor, and through the chain of relationships (Nicole → Gabriel → Juan → Sean → Noah → Dylan → Isabella), Nicole is also an ancestor of Isabella. Therefore, Joshua and Nicole share a common descendant, which is Isabella.
+
+The correct answer is option 3.
+
+<ANSWER>3</ANSWER>"
+8,ANCESTOR,1,"Given the following lineage relationships:
+* Doris is Maria's ancestor.
+* Bradley is Maria's descendant.
+* Alexis is Heather's ancestor.
+* Doris is William's descendant.
+* Frances is Heather's descendant.
+* Alexis is Eugene's descendant.
+* Frances is William's ancestor.
+Determine the lineage relationship between Eugene and Bradley.
+Select the correct answer:
+1. Eugene is Bradley's ancestor.
+2. Eugene and Bradley share a common ancestor.
+3. Eugene is Bradley's descendant.
+4. Eugene and Bradley share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,<ANSWER>1</ANSWER>
+8,DESCENDANT,4,"Given the following lineage relationships:
+* Christina is Nicholas's ancestor.
+* Gregory is Michelle's descendant.
+* Nicholas is Michelle's ancestor.
+* Richard is Anna's ancestor.
+* Amber is Gregory's descendant.
+* Richard is Mary's descendant.
+* Christina is Anna's descendant.
+Determine the lineage relationship between Amber and Mary.
+Select the correct answer:
+1. Amber is Mary's ancestor.
+2. Amber and Mary share a common ancestor.
+3. Amber and Mary share a common descendant.
+4. Amber is Mary's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain:
+
+- Mary is an ancestor of Richard (from Richard is Mary's descendant).
+- Richard is an ancestor of Anna (from Richard is Anna's ancestor).
+- Anna is an ancestor of Christina (from Christina is Anna's descendant).
+- Christina is an ancestor of Nicholas (from Christina is Nicholas's ancestor).
+- Nicholas is an ancestor of Michelle (from Nicholas is Michelle's ancestor).
+- Michelle is an ancestor of Gregory (from Gregory is Michelle's descendant).
+- Gregory is an ancestor of Amber (from Amber is Gregory's descendant).
+
+Thus, Mary → Richard → Anna → Christina → Nicholas → Michelle → Gregory → Amber.
+
+Therefore, Amber is Mary's descendant.
+
+The correct answer is option 4.
+
+<ANSWER>4</ANSWER>"
+8,COMMON_ANCESTOR,1,"Given the following lineage relationships:
+* Carl is Bradley's ancestor.
+* Theresa is Carl's ancestor.
+* Bradley is Brittany's ancestor.
+* Christian is Kenneth's ancestor.
+* Theresa is Jessica's ancestor.
+* Jessica is Christian's ancestor.
+* Brittany is Albert's ancestor.
+Determine the lineage relationship between Albert and Kenneth.
+Select the correct answer:
+1. Albert and Kenneth share a common ancestor.
+2. Albert and Kenneth share a common descendant.
+3. Albert is Kenneth's ancestor.
+4. Albert is Kenneth's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, both Albert and Kenneth are descendants of Theresa. Theresa is an ancestor to Carl, who is an ancestor to Bradley, who is an ancestor to Brittany, who is an ancestor to Albert. Similarly, Theresa is an ancestor to Jessica, who is an ancestor to Christian, who is an ancestor to Kenneth. Therefore, Albert and Kenneth share a common ancestor, which is Theresa.
+
+The correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,COMMON_DESCENDANT,2,"Given the following lineage relationships:
+* Rachel is Henry's ancestor.
+* Kayla is Keith's ancestor.
+* Henry is Michelle's descendant.
+* Ryan is Gloria's descendant.
+* Jean is Keith's descendant.
+* Jean is Michelle's ancestor.
+* Ryan is Rachel's ancestor.
+Determine the lineage relationship between Gloria and Kayla.
+Select the correct answer:
+1. Gloria and Kayla share a common ancestor.
+2. Gloria and Kayla share a common descendant.
+3. Gloria is Kayla's ancestor.
+4. Gloria is Kayla's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chains of descent:
+
+- From Kayla: Kayla → Keith → Jean → Michelle → Henry
+- From Gloria: Gloria → Ryan → Rachel → Henry
+
+Thus, both Gloria and Kayla are ancestors of Henry, meaning they share a common descendant, Henry.
+
+Therefore, the correct relationship is that Gloria and Kayla share a common descendant.
+
+<ANSWER>2</ANSWER>"
+8,ANCESTOR,1,"Given the following lineage relationships:
+* Charles is Rachel's descendant.
+* Joyce is Jacob's ancestor.
+* Elijah is Charles's descendant.
+* Karen is Anna's descendant.
+* Joyce is Kathryn's descendant.
+* Jacob is Rachel's ancestor.
+* Anna is Elijah's descendant.
+Determine the lineage relationship between Kathryn and Karen.
+Select the correct answer:
+1. Kathryn is Karen's ancestor.
+2. Kathryn and Karen share a common descendant.
+3. Kathryn and Karen share a common ancestor.
+4. Kathryn is Karen's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Kathryn is an ancestor of Joyce (from ""Joyce is Kathryn's descendant""), Joyce is an ancestor of Jacob (from ""Joyce is Jacob's ancestor""), Jacob is an ancestor of Rachel (from ""Jacob is Rachel's ancestor""), Rachel is an ancestor of Charles (from ""Charles is Rachel's descendant""), Charles is an ancestor of Elijah (from ""Elijah is Charles's descendant""), Elijah is an ancestor of Anna (from ""Anna is Elijah's descendant""), and Anna is an ancestor of Karen (from ""Karen is Anna's descendant""). Thus, Kathryn is an ancestor of Karen.
+
+Therefore, the correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,DESCENDANT,4,"Given the following lineage relationships:
+* Michelle is Deborah's ancestor.
+* Nancy is Danielle's descendant.
+* Michelle is Nancy's descendant.
+* Lauren is Pamela's descendant.
+* Lori is Pamela's ancestor.
+* Danielle is Olivia's descendant.
+* Lori is Deborah's descendant.
+Determine the lineage relationship between Lauren and Olivia.
+Select the correct answer:
+1. Lauren and Olivia share a common ancestor.
+2. Lauren is Olivia's ancestor.
+3. Lauren and Olivia share a common descendant.
+4. Lauren is Olivia's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Olivia is an ancestor of Danielle (from statement 6), Danielle is an ancestor of Nancy (from statement 2), Nancy is an ancestor of Michelle (from statement 3), Michelle is an ancestor of Deborah (from statement 1), Deborah is an ancestor of Lori (from statement 7), Lori is an ancestor of Pamela (from statement 5), and Pamela is an ancestor of Lauren (from statement 4). Thus, Olivia is an ancestor of Lauren, meaning Lauren is Olivia's descendant.
+
+Therefore, the correct relationship is that Lauren is Olivia's descendant, which corresponds to option 4.
+
+<ANSWER>4</ANSWER>"
+8,COMMON_ANCESTOR,4,"Given the following lineage relationships:
+* Helen is Gerald's descendant.
+* Carl is Julie's ancestor.
+* Carl is Willie's descendant.
+* Gerald is Jean's descendant.
+* Randy is Roger's descendant.
+* Roger is Willie's ancestor.
+* Julie is Jean's ancestor.
+Determine the lineage relationship between Randy and Helen.
+Select the correct answer:
+1. Randy and Helen share a common descendant.
+2. Randy is Helen's descendant.
+3. Randy is Helen's ancestor.
+4. Randy and Helen share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Roger is an ancestor of Willie (from point 6), Willie is an ancestor of Carl (from point 3), Carl is an ancestor of Julie (from point 2), Julie is an ancestor of Jean (from point 7), Jean is an ancestor of Gerald (from point 4), and Gerald is an ancestor of Helen (from point 1). Thus, Roger is an ancestor of Helen. Additionally, Randy is a descendant of Roger (from point 5). Therefore, both Randy and Helen are descendants of Roger, meaning they share a common ancestor (Roger). This corresponds to option 4.
+
+<ANSWER>4</ANSWER>"
+8,COMMON_DESCENDANT,2,"Given the following lineage relationships:
+* Jeremy is Sophia's descendant.
+* Ralph is Amanda's descendant.
+* Bryan is Jeremy's descendant.
+* Christine is Amanda's ancestor.
+* Catherine is Ralph's ancestor.
+* Madison is Catherine's ancestor.
+* Madison is Bryan's descendant.
+Determine the lineage relationship between Sophia and Christine.
+Select the correct answer:
+1. Sophia is Christine's descendant.
+2. Sophia and Christine share a common descendant.
+3. Sophia and Christine share a common ancestor.
+4. Sophia is Christine's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships:
+
+- Sophia is an ancestor of Jeremy, who is an ancestor of Bryan, who is an ancestor of Madison, who is an ancestor of Catherine, who is an ancestor of Ralph. Thus, Sophia is an ancestor of Ralph.
+- Christine is an ancestor of Amanda, who is an ancestor of Ralph. Thus, Christine is an ancestor of Ralph.
+
+Therefore, Sophia and Christine both have Ralph as a common descendant. This corresponds to option 2: Sophia and Christine share a common descendant.
+
+<ANSWER>2</ANSWER>"
+8,ANCESTOR,4,"Given the following lineage relationships:
+* Amber is Diane's ancestor.
+* Beverly is Henry's descendant.
+* Deborah is Gerald's ancestor.
+* Henry is Jerry's descendant.
+* Beverly is Deborah's ancestor.
+* Diane is Brittany's ancestor.
+* Amber is Gerald's descendant.
+Determine the lineage relationship between Jerry and Brittany.
+Select the correct answer:
+1. Jerry and Brittany share a common ancestor.
+2. Jerry is Brittany's descendant.
+3. Jerry and Brittany share a common descendant.
+4. Jerry is Brittany's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive a chain from Jerry to Brittany: Jerry → Henry → Beverly → Deborah → Gerald → Amber → Diane → Brittany. This shows that Jerry is an ancestor of Brittany. Therefore, the correct relationship is that Jerry is Brittany's ancestor.
+
+<ANSWER>4</ANSWER>"
+8,DESCENDANT,1,"Given the following lineage relationships:
+* Janet is Michael's ancestor.
+* Frances is Nicholas's descendant.
+* Nicholas is Andrea's descendant.
+* Jason is Dorothy's ancestor.
+* Michael is Jason's ancestor.
+* Theresa is Dorothy's descendant.
+* Andrea is Theresa's descendant.
+Determine the lineage relationship between Frances and Janet.
+Select the correct answer:
+1. Frances is Janet's descendant.
+2. Frances and Janet share a common descendant.
+3. Frances and Janet share a common ancestor.
+4. Frances is Janet's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Janet is Michael's ancestor, Michael is Jason's ancestor, Jason is Dorothy's ancestor, Dorothy is Theresa's ancestor, Theresa is Andrea's ancestor, Andrea is Nicholas's ancestor, and Nicholas is Frances's ancestor. Thus, Janet is an ancestor of Frances, meaning Frances is Janet's descendant.
+
+Therefore, the correct answer is option 1.
+
+<ANSWER>1</ANSWER>"
+8,COMMON_ANCESTOR,3,"Given the following lineage relationships:
+* Scott is Rachel's descendant.
+* Kevin is Walter's descendant.
+* Jesse is Kevin's descendant.
+* Rachel is Jesse's descendant.
+* Helen is Jacob's descendant.
+* Helen is Doris's ancestor.
+* Walter is Jacob's ancestor.
+Determine the lineage relationship between Scott and Doris.
+Select the correct answer:
+1. Scott and Doris share a common descendant.
+2. Scott is Doris's ancestor.
+3. Scott and Doris share a common ancestor.
+4. Scott is Doris's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, Scott and Doris both share Walter as a common ancestor. Scott is descended from Walter through Kevin, Jesse, and Rachel, while Doris is descended from Walter through Jacob and Helen. Therefore, option 3 is correct.
+
+<ANSWER>3</ANSWER>"
+8,COMMON_DESCENDANT,3,"Given the following lineage relationships:
+* Benjamin is Kenneth's ancestor.
+* Christine is Joshua's descendant.
+* Kenneth is Madison's descendant.
+* Ethan is Patrick's descendant.
+* Christine is Patrick's ancestor.
+* Ethan is Benjamin's ancestor.
+* Madison is Terry's descendant.
+Determine the lineage relationship between Terry and Joshua.
+Select the correct answer:
+1. Terry and Joshua share a common ancestor.
+2. Terry is Joshua's ancestor.
+3. Terry and Joshua share a common descendant.
+4. Terry is Joshua's descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chains:
+
+- Joshua → Christine → Patrick → Ethan → Benjamin → Kenneth
+- Terry → Madison → Kenneth
+
+Kenneth is a common descendant of both Joshua and Terry. Therefore, Terry and Joshua share a common descendant, which corresponds to option 3.
+
+<ANSWER>3</ANSWER>"
+8,ANCESTOR,4,"Given the following lineage relationships:
+* Austin is Scott's descendant.
+* Douglas is Samantha's descendant.
+* Donald is Paul's descendant.
+* Paul is Larry's descendant.
+* Larry is Austin's descendant.
+* Scott is Megan's descendant.
+* Douglas is Megan's ancestor.
+Determine the lineage relationship between Samantha and Donald.
+Select the correct answer:
+1. Samantha and Donald share a common descendant.
+2. Samantha and Donald share a common ancestor.
+3. Samantha is Donald's descendant.
+4. Samantha is Donald's ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the chain from Samantha to Donald as follows: Samantha is an ancestor of Douglas (since Douglas is Samantha's descendant), Douglas is an ancestor of Megan (since Douglas is Megan's ancestor), Megan is an ancestor of Scott (since Scott is Megan's descendant), Scott is an ancestor of Austin (since Austin is Scott's descendant), Austin is an ancestor of Larry (since Larry is Austin's descendant), Larry is an ancestor of Paul (since Paul is Larry's descendant), and Paul is an ancestor of Donald (since Donald is Paul's descendant). Thus, Samantha is an ancestor of Donald.
+
+The correct option is that Samantha is Donald's ancestor.
+
+<ANSWER>4</ANSWER>"
+8,DESCENDANT,3,"Given the following lineage relationships:
+* Peter is Sara's descendant.
+* Christian is Richard's descendant.
+* Peter is George's ancestor.
+* Maria is Diane's descendant.
+* Richard is George's descendant.
+* Maria is Sara's ancestor.
+* Victoria is Christian's descendant.
+Determine the lineage relationship between Victoria and Diane.
+Select the correct answer:
+1. Victoria is Diane's ancestor.
+2. Victoria and Diane share a common descendant.
+3. Victoria is Diane's descendant.
+4. Victoria and Diane share a common ancestor.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chain: Diane is an ancestor of Maria (from ""Maria is Diane's descendant""), Maria is an ancestor of Sara (from ""Maria is Sara's ancestor""), Sara is an ancestor of Peter (from ""Peter is Sara's descendant""), Peter is an ancestor of George (from ""Peter is George's ancestor""), George is an ancestor of Richard (from ""Richard is George's descendant""), Richard is an ancestor of Christian (from ""Christian is Richard's descendant""), and Christian is an ancestor of Victoria (from ""Victoria is Christian's descendant""). Thus, Victoria is a descendant of Diane. Therefore, the correct relationship is that Victoria is Diane's descendant.
+
+<ANSWER>3</ANSWER>"
+8,COMMON_ANCESTOR,2,"Given the following lineage relationships:
+* Jason is Samuel's descendant.
+* Rebecca is Sophia's descendant.
+* Gloria is Jason's descendant.
+* Gloria is Joe's ancestor.
+* Barbara is Alan's descendant.
+* Samuel is Alan's ancestor.
+* Sophia is Barbara's descendant.
+Determine the lineage relationship between Joe and Rebecca.
+Select the correct answer:
+1. Joe is Rebecca's descendant.
+2. Joe and Rebecca share a common ancestor.
+3. Joe is Rebecca's ancestor.
+4. Joe and Rebecca share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, both Joe and Rebecca are descendants of Samuel. Joe is descended from Samuel through Jason and Gloria, while Rebecca is descended from Samuel through Alan, Barbara, and Sophia. Therefore, Joe and Rebecca share a common ancestor, which is Samuel.
+
+The correct answer is option 2.
+
+<ANSWER>2</ANSWER>"
+8,COMMON_DESCENDANT,4,"Given the following lineage relationships:
+* Mason is Angela's descendant.
+* Sandra is Joan's ancestor.
+* Sharon is Diana's ancestor.
+* Brittany is Sandra's ancestor.
+* Joan is Sharon's ancestor.
+* Christina is Diana's descendant.
+* Christina is Mason's ancestor.
+Determine the lineage relationship between Angela and Brittany.
+Select the correct answer:
+1. Angela is Brittany's descendant.
+2. Angela and Brittany share a common ancestor.
+3. Angela is Brittany's ancestor.
+4. Angela and Brittany share a common descendant.
+5. None of the above is correct.
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",deepseek/deepseek-v3.1-terminus:exacto,Novita,,,"Based on the given lineage relationships, we can derive the following chains:
+
+- From Brittany to Mason: Brittany is Sandra's ancestor (point 4), Sandra is Joan's ancestor (point 2), Joan is Sharon's ancestor (point 5), Sharon is Diana's ancestor (point 3), Diana is Christina's ancestor (since Christina is Diana's descendant, point 6), and Christina is Mason's ancestor (point 7). Thus, Brittany → Sandra → Joan → Sharon → Diana → Christina → Mason, meaning Mason is a descendant of Brittany.
+
+- From Angela to Mason: Mason is Angela's descendant (point 1), so Mason is a descendant of Angela.
+
+Therefore, both Angela and Brittany have Mason as a descendant, meaning they share a common descendant. This corresponds to option 4.
+
+The other options are not supported:
+- Option 1: Angela is Brittany's descendant – No evidence suggests this; the chains do not connect Angela to Brittany directly.
+- Option 2: Angela and Brittany share a common ancestor – There is no information indicating a common ancestor.
+- Option 3: Angela is Brittany's ancestor – No evidence supports this.
+- Option 5: None of the above – Option 4 is correct.
+
+Thus, the correct answer is option 4.
+
+<ANSWER>4</ANSWER>"
