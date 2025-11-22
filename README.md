@@ -3,59 +3,53 @@ Testing LLM reasoning abilities with lineage relationship quizzes.
 
 The project is a successor of the [farel-bench](https://github.com/fairydreaming/farel-bench) benchmark.
 
-**Note: due to the high cost of benchmark runs the project is currently put on hiatus.**
+**Note: This benchmark seems to be already saturated by Claude Sonnet 4.5 and recently released Gemini 3 Pro Preview even for 192 problem size. I'm very happy with this progress!**
 
 ## Changelog
 
-* 2024-03-07 - Added results for qwq-32b (used Parasail provider with 0.01 temp, observed some infinite loop generations, but mostly for lineage-64 where the model performs bad anyway).
-* 2024-03-04 - Updated results for perplexity/r1-1776. (apparently there was a problem with the model serving stack, that's why r1-1776 initially performed worse than expected)
-* 2024-02-26 - Added results for claude-3.7-sonnet (also with :thinking) and r1-1776
-* 2024-02-20 - Updated results for deepseek/deepseek-r1-distill-llama-70b. (used Groq provider with 0.5 temperature)
-* 2024-02-18 - Added results for kimi-k1.5-preview and llama-3.1-tulu-3-405b.
-* 2024-02-06 - Added results for o1, o3-mini, qwen-max, gemini-exp-1206, deepseek-r1-distill-qwen-14b and deepseek-r1-distill-qwen-32b.
-* 2024-01-24 - Added results for deepseek-r1-distill-llama-70b.
-* 2024-01-20 - Added results for deepseek-r1.
-* 2024-01-15 - Added results for deepseek-v3, gemini-2.0-flash-exp, gemini-2.0-flash-thinking-exp-1219 and minimax-01.
+* 2025-11-22 - Updated results to include recently released models, but only with 40 quizzes per problem size to reduce costs. Extended range of problem lengths to increase difficulty. Added file-based caching of model requests and responses.
+* 2025-03-07 - Added results for qwq-32b (used Parasail provider with 0.01 temp, observed some infinite loop generations, but mostly for lineage-64 where the model performs bad anyway).
+* 2025-03-04 - Updated results for perplexity/r1-1776. (apparently there was a problem with the model serving stack, that's why r1-1776 initially performed worse than expected)
+* 2025-02-26 - Added results for claude-3.7-sonnet (also with :thinking) and r1-1776
+* 2025-02-20 - Updated results for deepseek/deepseek-r1-distill-llama-70b. (used Groq provider with 0.5 temperature)
+* 2025-02-18 - Added results for kimi-k1.5-preview and llama-3.1-tulu-3-405b.
+* 2025-02-06 - Added results for o1, o3-mini, qwen-max, gemini-exp-1206, deepseek-r1-distill-qwen-14b and deepseek-r1-distill-qwen-32b.
+* 2025-01-24 - Added results for deepseek-r1-distill-llama-70b.
+* 2025-01-20 - Added results for deepseek-r1.
+* 2025-01-15 - Added results for deepseek-v3, gemini-2.0-flash-exp, gemini-2.0-flash-thinking-exp-1219 and minimax-01.
 
 ## Results
 
 ### Plot
 
-![results_stacked](https://github.com/user-attachments/assets/559e686c-ce1e-4c9d-851e-1d9e2eb6f6b1)
+![results_stacked](https://github.com/user-attachments/assets/e4770be7-70ca-4067-8817-c6f0a36897e7)
 
 ### Table
 
-The table below presents the benchmark results.
+The table below presents the benchmark results. Medium reasoning effort was used in OpenAI and xAI models.
 
-|   Nr | model_name                             |      mean |   lineage-8 |   lineage-16 |   lineage-32 |   lineage-64 |
-|-----:|:---------------------------------------|----------:|------------:|-------------:|-------------:|-------------:|
-|    1 | perplexity/r1-1776                     |     0.934 |       0.965 |        0.985 |        0.935 |        0.850 |
-|    2 | openai/o1                              |     0.921 |       1.000 |        0.980 |        0.925 |        0.780 |
-|    3 | deepseek/deepseek-r1                   |     0.917 |       0.965 |        0.980 |        0.945 |        0.780 |
-|    4 | anthropic/claude-3.7-sonnet:thinking   |     0.898 |       0.985 |        0.970 |        0.910 |        0.725 |
-|    5 | deepseek/deepseek-r1-distill-llama-70b |     0.734 |       0.925 |        0.830 |        0.660 |        0.520 |
-|    6 | openai/o3-mini                         |     0.726 |       0.970 |        0.945 |        0.795 |        0.195 |
-|    7 | qwen/qwq-32b                           |     0.695 |       0.960 |        0.915 |        0.690 |        0.215 |
-|    8 | kimi-k1.5-preview                      |     0.613 |       0.830 |        0.655 |        0.635 |        0.330 |
-|    8 | deepseek/deepseek-r1-distill-qwen-32b  |     0.613 |       0.805 |        0.685 |        0.595 |        0.365 |
-|   10 | deepseek/deepseek-chat                 |     0.610 |       0.860 |        0.590 |        0.530 |        0.460 |
-|   11 | openai/o1-mini                         |     0.562 |       0.955 |        0.820 |        0.400 |        0.075 |
-|   12 | gemini-exp-1206                        |     0.517 |       0.640 |        0.495 |        0.455 |        0.480 |
-|   13 | google/gemini-pro-1.5                  |     0.492 |       0.620 |        0.530 |        0.440 |        0.380 |
-|   14 | openai/gpt-4o-2024-11-20               |     0.490 |       0.755 |        0.545 |        0.425 |        0.235 |
-|   15 | meta-llama/llama-3.1-405b-instruct     |     0.489 |       0.660 |        0.590 |        0.465 |        0.240 |
-|   16 | qwen/qwq-32b-preview                   |     0.476 |       0.845 |        0.585 |        0.315 |        0.160 |
-|   17 | mistralai/mistral-large-2411           |     0.475 |       0.695 |        0.510 |        0.360 |        0.335 |
-|   17 | allenai/llama-3.1-tulu-3-405b          |     0.475 |       0.710 |        0.505 |        0.335 |        0.350 |
-|   19 | qwen/qwen-max                          |     0.463 |       0.710 |        0.435 |        0.410 |        0.295 |
-|   20 | meta-llama/llama-3.3-70b-instruct      |     0.438 |       0.625 |        0.485 |        0.340 |        0.300 |
-|   21 | deepseek/deepseek-r1-distill-qwen-14b  |     0.428 |       0.830 |        0.600 |        0.200 |        0.080 |
-|   22 | x-ai/grok-2-1212                       |     0.405 |       0.580 |        0.395 |        0.360 |        0.285 |
-|   23 | gemini-2.0-flash-thinking-exp-1219     |     0.395 |       0.595 |        0.465 |        0.325 |        0.195 |
-|   24 | anthropic/claude-3.7-sonnet            |     0.359 |       0.790 |        0.440 |        0.155 |        0.050 |
-|   25 | minimax/minimax-01                     |     0.292 |       0.560 |        0.370 |        0.155 |        0.085 |
-|   26 | gemini-2.0-flash-exp                   |     0.247 |       0.460 |        0.190 |        0.200 |        0.140 |
-|   27 | anthropic/claude-3.5-sonnet            |     0.221 |       0.645 |        0.205 |        0.035 |        0.000 |
+|   Nr | model_name                             |   lineage |   lineage-8 |   lineage-64 |   lineage-128 |   lineage-192 |
+|-----:|:---------------------------------------|----------:|------------:|-------------:|--------------:|--------------:|
+|    1 | google/gemini-3-pro-preview            |     0.969 |       1.000 |        1.000 |         0.925 |         0.950 |
+|    2 | anthropic/claude-sonnet-4.5            |     0.944 |       0.975 |        0.975 |         0.900 |         0.925 |
+|    3 | qwen/qwen3-max                         |     0.869 |       1.000 |        0.800 |         0.900 |         0.775 |
+|    4 | x-ai/grok-4-fast                       |     0.869 |       1.000 |        0.925 |         0.900 |         0.650 |
+|    4 | x-ai/grok-4                            |     0.869 |       1.000 |        0.950 |         0.900 |         0.625 |
+|    6 | qwen/qwen3-235b-a22b-thinking-2507     |     0.856 |       0.900 |        0.875 |         0.850 |         0.800 |
+|    7 | deepseek/deepseek-v3.1-terminus:exacto |     0.812 |       0.975 |        0.900 |         0.700 |         0.675 |
+|    8 | deepseek/deepseek-v3.2-exp             |     0.794 |       0.975 |        0.900 |         0.700 |         0.600 |
+|    9 | anthropic/claude-haiku-4.5             |     0.794 |       0.975 |        0.925 |         0.575 |         0.700 |
+|   10 | openai/gpt-5                           |     0.788 |       1.000 |        0.975 |         0.850 |         0.325 |
+|   11 | deepcogito/cogito-v2.1-671b            |     0.756 |       0.975 |        0.800 |         0.650 |         0.600 |
+|   12 | qwen/qwen3-next-80b-a3b-thinking       |     0.575 |       0.950 |        0.700 |         0.425 |         0.225 |
+|   13 | openai/gpt-oss-120b:exacto             |     0.544 |       1.000 |        0.825 |         0.325 |         0.025 |
+|   14 | minimax/minimax-m2                     |     0.531 |       1.000 |        0.575 |         0.350 |         0.200 |
+|   15 | moonshotai/kimi-k2-thinking            |     0.525 |       1.000 |        0.850 |         0.200 |         0.050 |
+|   16 | openai/gpt-5-mini                      |     0.512 |       1.000 |        0.950 |         0.075 |         0.025 |
+|   17 | z-ai/glm-4.6:exacto                    |     0.506 |       0.925 |        0.600 |         0.350 |         0.150 |
+|   18 | qwen/qwen3-30b-a3b-thinking-2507       |     0.494 |       1.000 |        0.575 |         0.275 |         0.125 |
+|   19 | allenai/olmo-3-32b-think               |     0.444 |       0.925 |        0.600 |         0.175 |         0.075 |
+|   20 | openai/gpt-5-nano                      |     0.294 |       1.000 |        0.150 |         0.025 |         0.000 |
 
 Each row contains the average benchmark score across all problem sizes, and separate scores for each problem size.
 
@@ -141,7 +135,7 @@ Output is usually written to the standard output. Input is usually read from the
 
 Example usage:
 ```
-$ ./lineage_bench.py -s -l 8 -n 10 -r 42|./run_openrouter.py -m "google/gemini-pro-1.5" -t 8 -v|tee results/gemini-pro-1.5_8.csv
+$ ./lineage_bench.py -s -l 8 -n 10 -r 42|./run_openrouter.py -m "google/gemini-pro-1.5" -t 8 -r -o results/gemini-pro-1.5 -v|tee results/gemini-pro-1.5_8.csv
 $ cat results/*.csv|./compute_metrics.py --csv --relaxed|./plot_stacked.py -o results.png
 ```
 
@@ -150,7 +144,7 @@ I usually run the benchmark like this:
 ```
 for length in 8 16 32 64
 do
-  ./lineage_bench.py -s -l $length -n 50 -r 42|./run_openrouter.py -m <model> -p <provider> -v|tee results/<model>_$length.log
+  ./lineage_bench.py -s -l $length -n 50 -r 42|./run_openrouter.py -m <model> -p <provider> -o <cache_dir> -r -v|tee results/<model>_$length.csv
 done
 ```
 
@@ -180,16 +174,21 @@ options:
 Before running `run_openrouter.py` set OPENROUTER_API_KEY environment variable to your OpenRouter API Key.
 
 ```
-usage: run_openrouter.py [-h] -m MODEL [-p PROVIDER] [-e EFFORT] [-t THREADS] [-v] [-s [SYSTEM_PROMPT]]
+usage: run_openrouter.py [-h] [-u URL] -m MODEL -o OUTPUT [-p PROVIDER] [-r] [-e EFFORT] [-t THREADS] [-v] [-s [SYSTEM_PROMPT]] [-T TEMP]
+                         [-P TOP_P] [-K TOP_K] [-n MAX_TOKENS] [-i RETRIES]
 
 options:
   -h, --help            show this help message and exit
+  -u URL, --url URL     OpenAI-compatible API URL
   -m MODEL, --model MODEL
                         OpenRouter model name.
+  -o OUTPUT, --output OUTPUT
+                        Directory for storing model responses.
   -p PROVIDER, --provider PROVIDER
                         OpenRouter provider name.
+  -r, --reasoning       Enable reasoning.
   -e EFFORT, --effort EFFORT
-                        Reasoning effort (o1 model only).
+                        Reasoning effort (recent OpenAI and xAI models support this).
   -t THREADS, --threads THREADS
                         Number of threads to use.
   -v, --verbose         Enable verbose output.
@@ -199,8 +198,14 @@ options:
                         step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any
                         question.'
   -T TEMP, --temp TEMP  Temperature value to use.
+  -P TOP_P, --top-p TOP_P
+                        top_p sampling parameter.
+  -K TOP_K, --top-k TOP_K
+                        top_k sampling parameter.
   -n MAX_TOKENS, --max-tokens MAX_TOKENS
                         Max number of tokens to generate.
+  -i RETRIES, --retries RETRIES
+                        Max number of API request retries.
 ```
 
 ### compute_metrics.py
