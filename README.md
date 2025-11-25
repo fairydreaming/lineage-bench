@@ -7,6 +7,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ## Changelog
 
+* 2025-11-25 - Added results for gpt-5.1, claude-opus-4.5, grok-4.1-fast and o4-mini.
 * 2025-11-23 - Added results for qwen3-32b, o3-mini and o3 models.
 * 2025-11-22 - Updated results to include recently released models, but only with 40 quizzes per problem size to reduce costs. Extended range of problem lengths to increase difficulty. Added file-based caching of model requests and responses.
 * 2025-03-07 - Added results for qwq-32b (used Parasail provider with 0.01 temp, observed some infinite loop generations, but mostly for lineage-64 where the model performs bad anyway).
@@ -25,7 +26,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 #### Current results
 
-![results_stacked](https://github.com/user-attachments/assets/5d95b3e4-67aa-4c5a-8b0a-6977901f1730)
+![results_stacked](https://github.com/user-attachments/assets/5d54b85d-1daf-4f7d-9771-e75fc9621398)
 
 #### Old results
 
@@ -33,34 +34,37 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ### Table
 
-The table below presents the benchmark results. Medium reasoning effort was used in OpenAI and xAI models.
+The table below presents the benchmark results. Medium reasoning effort was used in Claude Opus 4.5, OpenAI and xAI models.
 
 |   Nr | model_name                             |   lineage |   lineage-8 |   lineage-64 |   lineage-128 |   lineage-192 |
 |-----:|:---------------------------------------|----------:|------------:|-------------:|--------------:|--------------:|
 |    1 | google/gemini-3-pro-preview            |     0.969 |       1.000 |        1.000 |         0.925 |         0.950 |
 |    2 | anthropic/claude-sonnet-4.5            |     0.944 |       0.975 |        0.975 |         0.900 |         0.925 |
-|    3 | qwen/qwen3-max                         |     0.869 |       1.000 |        0.800 |         0.900 |         0.775 |
-|    4 | x-ai/grok-4                            |     0.869 |       1.000 |        0.950 |         0.900 |         0.625 |
-|    4 | x-ai/grok-4-fast                       |     0.869 |       1.000 |        0.925 |         0.900 |         0.650 |
-|    6 | qwen/qwen3-235b-a22b-thinking-2507     |     0.856 |       0.900 |        0.875 |         0.850 |         0.800 |
-|    7 | deepseek/deepseek-v3.1-terminus:exacto |     0.812 |       0.975 |        0.900 |         0.700 |         0.675 |
-|    8 | openai/o3                              |     0.800 |       1.000 |        0.925 |         0.800 |         0.475 |
-|    9 | deepseek/deepseek-v3.2-exp             |     0.794 |       0.975 |        0.900 |         0.700 |         0.600 |
-|   10 | anthropic/claude-haiku-4.5             |     0.794 |       0.975 |        0.925 |         0.575 |         0.700 |
-|   11 | openai/gpt-5                           |     0.788 |       1.000 |        0.975 |         0.850 |         0.325 |
-|   12 | deepcogito/cogito-v2.1-671b            |     0.756 |       0.975 |        0.800 |         0.650 |         0.600 |
-|   13 | qwen/qwen3-next-80b-a3b-thinking       |     0.575 |       0.950 |        0.700 |         0.425 |         0.225 |
-|   14 | openai/gpt-oss-120b:exacto             |     0.544 |       1.000 |        0.825 |         0.325 |         0.025 |
-|   15 | minimax/minimax-m2                     |     0.531 |       1.000 |        0.575 |         0.350 |         0.200 |
-|   16 | moonshotai/kimi-k2-thinking            |     0.525 |       1.000 |        0.850 |         0.200 |         0.050 |
-|   17 | openai/gpt-5-mini                      |     0.512 |       1.000 |        0.950 |         0.075 |         0.025 |
-|   18 | z-ai/glm-4.6:exacto                    |     0.506 |       0.925 |        0.600 |         0.350 |         0.150 |
-|   19 | qwen/qwen3-30b-a3b-thinking-2507       |     0.494 |       1.000 |        0.575 |         0.275 |         0.125 |
-|   20 | allenai/olmo-3-32b-think               |     0.444 |       0.925 |        0.600 |         0.175 |         0.075 |
-|   21 | qwen/qwen3-32b                         |     0.362 |       0.950 |        0.475 |         0.025 |         0.000 |
-|   22 | openai/gpt-5-nano                      |     0.294 |       1.000 |        0.150 |         0.025 |         0.000 |
-|   23 | openai/o3-mini                         |     0.287 |       0.950 |        0.200 |         0.000 |         0.000 |
-
+|    3 | openai/gpt-5.1                         |     0.888 |       1.000 |        0.950 |         0.875 |         0.725 |
+|    4 | qwen/qwen3-max                         |     0.869 |       1.000 |        0.800 |         0.900 |         0.775 |
+|    5 | anthropic/claude-opus-4.5              |     0.869 |       1.000 |        0.950 |         0.900 |         0.625 |
+|    5 | x-ai/grok-4                            |     0.869 |       1.000 |        0.950 |         0.900 |         0.625 |
+|    5 | x-ai/grok-4-fast                       |     0.869 |       1.000 |        0.925 |         0.900 |         0.650 |
+|    8 | qwen/qwen3-235b-a22b-thinking-2507     |     0.856 |       0.900 |        0.875 |         0.850 |         0.800 |
+|    9 | deepseek/deepseek-v3.1-terminus:exacto |     0.812 |       0.975 |        0.900 |         0.700 |         0.675 |
+|   10 | openai/o3                              |     0.800 |       1.000 |        0.925 |         0.800 |         0.475 |
+|   11 | deepseek/deepseek-v3.2-exp             |     0.794 |       0.975 |        0.900 |         0.700 |         0.600 |
+|   12 | anthropic/claude-haiku-4.5             |     0.794 |       0.975 |        0.925 |         0.575 |         0.700 |
+|   13 | openai/gpt-5                           |     0.788 |       1.000 |        0.975 |         0.850 |         0.325 |
+|   14 | deepcogito/cogito-v2.1-671b            |     0.756 |       0.975 |        0.800 |         0.650 |         0.600 |
+|   15 | x-ai/grok-4.1-fast                     |     0.750 |       1.000 |        0.900 |         0.800 |         0.300 |
+|   16 | qwen/qwen3-next-80b-a3b-thinking       |     0.575 |       0.950 |        0.700 |         0.425 |         0.225 |
+|   17 | openai/gpt-oss-120b:exacto             |     0.544 |       1.000 |        0.825 |         0.325 |         0.025 |
+|   18 | minimax/minimax-m2                     |     0.531 |       1.000 |        0.575 |         0.350 |         0.200 |
+|   19 | moonshotai/kimi-k2-thinking            |     0.525 |       1.000 |        0.850 |         0.200 |         0.050 |
+|   19 | openai/o4-mini                         |     0.525 |       1.000 |        0.775 |         0.300 |         0.025 |
+|   21 | openai/gpt-5-mini                      |     0.512 |       1.000 |        0.950 |         0.075 |         0.025 |
+|   22 | z-ai/glm-4.6:exacto                    |     0.506 |       0.925 |        0.600 |         0.350 |         0.150 |
+|   23 | qwen/qwen3-30b-a3b-thinking-2507       |     0.494 |       1.000 |        0.575 |         0.275 |         0.125 |
+|   24 | allenai/olmo-3-32b-think               |     0.444 |       0.925 |        0.600 |         0.175 |         0.075 |
+|   25 | qwen/qwen3-32b                         |     0.362 |       0.950 |        0.475 |         0.025 |         0.000 |
+|   26 | openai/gpt-5-nano                      |     0.294 |       1.000 |        0.150 |         0.025 |         0.000 |
+|   27 | openai/o3-mini                         |     0.287 |       0.950 |        0.200 |         0.000 |         0.000 |
 
 Each row contains the average benchmark score across all problem sizes, and separate scores for each problem size.
 
