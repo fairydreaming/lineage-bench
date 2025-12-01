@@ -107,7 +107,7 @@ def make_request(row):
     if os.path.exists(request_file_path) and os.path.exists(response_file_path):
         # Skip API call if model response is already saved in a JSON file
         if is_verbose:
-            print(f"{quiz_id} Skipping already answered quiz")
+            print(f"{quiz_id} Skipping already answered quiz", file=sys.stderr)
 
         with open(response_file_path, "r") as f:
             response_json = json.load(f)
@@ -118,7 +118,7 @@ def make_request(row):
             try:
                 response = requests.post(
                     url = api_url,
-                    headers = { "Authorization": f"Bearer {api_key}" },
+                    headers = { "Content-Type": "application/json", "Authorization": f"Bearer {api_key}" },
                     data=json.dumps(request_data),
                 )
 
