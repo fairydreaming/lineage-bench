@@ -3,7 +3,7 @@ Testing LLM reasoning abilities with lineage relationship quizzes.
 
 The project is a successor of the [farel-bench](https://github.com/fairydreaming/farel-bench) benchmark.
 
-**Note: This benchmark seems to be already saturated by DeepSeek V3.2 Speciale, Gemini 3 Pro Preview and Claude Sonnet 4.5 even for lineage graphs with 192 nodes. I'm very happy with this progress!**
+**Note: This benchmark seems to be already saturated even for lineage graphs with 192 nodes. I'm very happy with this progress!**
 
 ## Changelog
 
