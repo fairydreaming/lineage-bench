@@ -25,7 +25,7 @@ parser.add_argument("-s", "--system-prompt", help="Use given system prompt. By d
 parser.add_argument("-T", "--temp", help="Temperature value to use.", type=float, default=0.01)
 parser.add_argument("-P", "--top-p", help="top_p sampling parameter.", type=float)
 parser.add_argument("-K", "--top-k", help="top_k sampling parameter.", type=int)
-parser.add_argument("-n", "--max-tokens", help="Max number of tokens to generate.", type=int, default=16384)
+parser.add_argument("-n", "--max-tokens", help="Max number of tokens to generate.", type=int)
 parser.add_argument("-i", "--retries", help="Max number of API request retries.", type=int, default=5)
 args = parser.parse_args()
 output_dir = args.output
@@ -74,9 +74,11 @@ def make_request(row):
         "model": model_name,
         "temperature": temperature,
         "seed": 42,
-        "max_tokens": max_tokens,
         "messages": messages,
     }
+
+    if max_tokens:
+        request_data["max_tokens"] = max_tokens
 
     if provider_name:
         request_data["provider"] = { "order": [ provider_name ], "allow_fallbacks": False }
