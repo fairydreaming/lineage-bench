@@ -7,7 +7,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ## Changelog
 
-* 2025-12-03 - Updated results for ring-1t model.
+* 2025-12-03 - Updated results for ring-1t model. Added results for seed-oss-36b-instruct (courtesy of [@mokieli](https://github.com/mokieli)).
 * 2025-12-01 - Added results for ring-1t, deepseek-r1-0528, glm-4.5-air, glm-4.5, intellect-3, ernie-5.0-thinking-preview, deepseek-v3.2 and deepseek-v3.2-speciale. Updated results for glm-4.6 (works better with lower temperature). Results for ring-1t are not final (problems with model provider).
 * 2025-11-25 - Added results for gpt-5.1, claude-opus-4.5, grok-4.1-fast and o4-mini.
 * 2025-11-23 - Added results for qwen3-32b, o3-mini and o3 models.
@@ -28,7 +28,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 #### Current results
 
-![results_stacked](https://github.com/user-attachments/assets/2d3827dd-343d-4db9-b6a0-b3b4edf0ac53)
+![results_stacked](https://github.com/user-attachments/assets/3d5db798-d7e0-442d-b583-3986b40bd8f0)
 
 #### Old results
 
@@ -57,24 +57,25 @@ The table below presents the benchmark results. Medium reasoning effort was used
 |   15 | anthropic/claude-haiku-4.5             |     0.794 |       0.975 |        0.925 |         0.575 |         0.700 |
 |   16 | openai/gpt-5                           |     0.788 |       1.000 |        0.975 |         0.850 |         0.325 |
 |   17 | deepseek/deepseek-r1-0528              |     0.787 |       1.000 |        0.975 |         0.650 |         0.525 |
-|   18 | deepcogito/cogito-v2.1-671b            |     0.756 |       0.975 |        0.800 |         0.650 |         0.600 |
-|   19 | x-ai/grok-4.1-fast                     |     0.750 |       1.000 |        0.900 |         0.800 |         0.300 |
-|   20 | baidu/ernie-5.0-thinking-preview       |     0.719 |       1.000 |        0.850 |         0.650 |         0.375 |
-|   21 | z-ai/glm-4.5                           |     0.700 |       1.000 |        0.775 |         0.625 |         0.400 |
-|   22 | z-ai/glm-4.6:exacto                    |     0.644 |       0.925 |        0.725 |         0.525 |         0.400 |
-|   23 | z-ai/glm-4.5-air                       |     0.594 |       1.000 |        0.750 |         0.450 |         0.175 |
-|   23 | prime-intellect/intellect-3            |     0.594 |       1.000 |        0.950 |         0.325 |         0.100 |
-|   25 | qwen/qwen3-next-80b-a3b-thinking       |     0.575 |       0.950 |        0.700 |         0.425 |         0.225 |
-|   26 | minimax/minimax-m2                     |     0.562 |       0.975 |        0.700 |         0.350 |         0.225 |
-|   27 | openai/gpt-oss-120b:exacto             |     0.544 |       1.000 |        0.825 |         0.325 |         0.025 |
-|   28 | moonshotai/kimi-k2-thinking            |     0.525 |       1.000 |        0.850 |         0.200 |         0.050 |
-|   28 | openai/o4-mini                         |     0.525 |       1.000 |        0.775 |         0.300 |         0.025 |
-|   30 | openai/gpt-5-mini                      |     0.512 |       1.000 |        0.950 |         0.075 |         0.025 |
-|   31 | qwen/qwen3-30b-a3b-thinking-2507       |     0.494 |       1.000 |        0.575 |         0.275 |         0.125 |
-|   32 | allenai/olmo-3-32b-think               |     0.444 |       0.925 |        0.600 |         0.175 |         0.075 |
-|   33 | qwen/qwen3-32b                         |     0.362 |       0.950 |        0.475 |         0.025 |         0.000 |
-|   34 | openai/gpt-5-nano                      |     0.294 |       1.000 |        0.150 |         0.025 |         0.000 |
-|   35 | openai/o3-mini                         |     0.287 |       0.950 |        0.200 |         0.000 |         0.000 |
+|   18 | bytedance/seed-oss-36b-instruct        |     0.769 |       1.000 |        0.850 |         0.750 |         0.475 |
+|   19 | deepcogito/cogito-v2.1-671b            |     0.756 |       0.975 |        0.800 |         0.650 |         0.600 |
+|   20 | x-ai/grok-4.1-fast                     |     0.750 |       1.000 |        0.900 |         0.800 |         0.300 |
+|   21 | baidu/ernie-5.0-thinking-preview       |     0.719 |       1.000 |        0.850 |         0.650 |         0.375 |
+|   22 | z-ai/glm-4.5                           |     0.700 |       1.000 |        0.775 |         0.625 |         0.400 |
+|   23 | z-ai/glm-4.6:exacto                    |     0.644 |       0.925 |        0.725 |         0.525 |         0.400 |
+|   24 | z-ai/glm-4.5-air                       |     0.594 |       1.000 |        0.750 |         0.450 |         0.175 |
+|   24 | prime-intellect/intellect-3            |     0.594 |       1.000 |        0.950 |         0.325 |         0.100 |
+|   26 | qwen/qwen3-next-80b-a3b-thinking       |     0.575 |       0.950 |        0.700 |         0.425 |         0.225 |
+|   27 | minimax/minimax-m2                     |     0.562 |       0.975 |        0.700 |         0.350 |         0.225 |
+|   28 | openai/gpt-oss-120b:exacto             |     0.544 |       1.000 |        0.825 |         0.325 |         0.025 |
+|   29 | moonshotai/kimi-k2-thinking            |     0.525 |       1.000 |        0.850 |         0.200 |         0.050 |
+|   29 | openai/o4-mini                         |     0.525 |       1.000 |        0.775 |         0.300 |         0.025 |
+|   31 | openai/gpt-5-mini                      |     0.512 |       1.000 |        0.950 |         0.075 |         0.025 |
+|   32 | qwen/qwen3-30b-a3b-thinking-2507       |     0.494 |       1.000 |        0.575 |         0.275 |         0.125 |
+|   33 | allenai/olmo-3-32b-think               |     0.444 |       0.925 |        0.600 |         0.175 |         0.075 |
+|   34 | qwen/qwen3-32b                         |     0.362 |       0.950 |        0.475 |         0.025 |         0.000 |
+|   35 | openai/gpt-5-nano                      |     0.294 |       1.000 |        0.150 |         0.025 |         0.000 |
+|   36 | openai/o3-mini                         |     0.287 |       0.950 |        0.200 |         0.000 |         0.000 |
 
 Each row contains the average benchmark score across all problem sizes, and separate scores for each problem size.
 
