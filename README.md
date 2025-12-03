@@ -28,7 +28,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 #### Current results
 
-![results_stacked](https://github.com/user-attachments/assets/98fa220b-0c22-4918-95ee-a162ae8736e4)
+![results_stacked](https://github.com/user-attachments/assets/2d3827dd-343d-4db9-b6a0-b3b4edf0ac53)
 
 #### Old results
 
@@ -59,7 +59,7 @@ The table below presents the benchmark results. Medium reasoning effort was used
 |   17 | deepseek/deepseek-r1-0528              |     0.787 |       1.000 |        0.975 |         0.650 |         0.525 |
 |   18 | deepcogito/cogito-v2.1-671b            |     0.756 |       0.975 |        0.800 |         0.650 |         0.600 |
 |   19 | x-ai/grok-4.1-fast                     |     0.750 |       1.000 |        0.900 |         0.800 |         0.300 |
-|   20 | baidu/ernie-5.0-thinking-preview       |     0.706 |       1.000 |        0.850 |         0.650 |         0.325 |
+|   20 | baidu/ernie-5.0-thinking-preview       |     0.719 |       1.000 |        0.850 |         0.650 |         0.375 |
 |   21 | z-ai/glm-4.5                           |     0.700 |       1.000 |        0.775 |         0.625 |         0.400 |
 |   22 | z-ai/glm-4.6:exacto                    |     0.644 |       0.925 |        0.725 |         0.525 |         0.400 |
 |   23 | z-ai/glm-4.5-air                       |     0.594 |       1.000 |        0.750 |         0.450 |         0.175 |
