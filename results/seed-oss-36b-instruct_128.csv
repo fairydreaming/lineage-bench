@@ -133,7 +133,7 @@ Select the correct answer:
 3. Andrea and Keith share a common descendant.
 4. Andrea is Keith's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,DESCENDANT,2,"Given the following lineage relationships:
 * Barbara is Richard's descendant.
 * Zachary is Aaron's descendant.
@@ -269,7 +269,7 @@ Select the correct answer:
 3. Samantha and Evelyn share a common ancestor.
 4. Samantha and Evelyn share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>2</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>2</ANSWER>
 128,COMMON_ANCESTOR,4,"Given the following lineage relationships:
 * Nicole is Stephanie's descendant.
 * Ashley is Bradley's descendant.
@@ -405,7 +405,7 @@ Select the correct answer:
 3. Randy and Bobby share a common descendant.
 4. Randy and Bobby share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,COMMON_DESCENDANT,1,"Given the following lineage relationships:
 * Natalie is Gloria's descendant.
 * Patrick is Aaron's ancestor.
@@ -541,7 +541,7 @@ Select the correct answer:
 3. Patrick is Margaret's descendant.
 4. Patrick is Margaret's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>1</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>1</ANSWER>
 128,ANCESTOR,4,"Given the following lineage relationships:
 * Amy is Sophia's ancestor.
 * Jeremy is Isabella's descendant.
@@ -677,7 +677,7 @@ Select the correct answer:
 3. Ashley is Jennifer's descendant.
 4. Ashley is Jennifer's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,DESCENDANT,1,"Given the following lineage relationships:
 * Jonathan is Kelly's descendant.
 * Emily is Donald's descendant.
@@ -813,7 +813,7 @@ Select the correct answer:
 3. Michelle and John share a common descendant.
 4. Michelle and John share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>1</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>1</ANSWER>
 128,COMMON_ANCESTOR,4,"Given the following lineage relationships:
 * James is Elizabeth's descendant.
 * Ralph is Lauren's descendant.
@@ -949,7 +949,7 @@ Select the correct answer:
 3. Roger and Debra share a common descendant.
 4. Roger and Debra share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,COMMON_DESCENDANT,1,"Given the following lineage relationships:
 * Dylan is Kimberly's descendant.
 * Heather is Madison's ancestor.
@@ -1085,7 +1085,7 @@ Select the correct answer:
 3. Lori is Harold's descendant.
 4. Lori is Harold's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>1</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>1</ANSWER>
 128,ANCESTOR,2,"Given the following lineage relationships:
 * Patrick is Zachary's descendant.
 * Julia is Lisa's descendant.
@@ -1221,7 +1221,7 @@ Select the correct answer:
 3. Sophia is Charles's descendant.
 4. Sophia and Charles share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>2</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>2</ANSWER>
 128,DESCENDANT,2,"Given the following lineage relationships:
 * Ann is Sandra's descendant.
 * Kayla is Randy's descendant.
@@ -1357,7 +1357,7 @@ Select the correct answer:
 3. Janice is Betty's ancestor.
 4. Janice and Betty share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,"
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,"
 Got it, let's try to figure out the relationship between Janice and Betty. First, I need to map out their lineages step by step, starting with what we know about each of them and then seeing if we can connect them through the given relationships.
 
 First, let's list out all the information we have that mentions Janice or Betty. Let's start with Janice:
@@ -1506,7 +1506,7 @@ Select the correct answer:
 3. Christopher is James's ancestor.
 4. Christopher and James share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,COMMON_DESCENDANT,3,"Given the following lineage relationships:
 * Bruce is Roger's descendant.
 * Donna is Jesse's descendant.
@@ -1642,7 +1642,7 @@ Select the correct answer:
 3. Jennifer and Justin share a common descendant.
 4. Jennifer and Justin share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,ANCESTOR,4,"Given the following lineage relationships:
 * Ethan is Gregory's descendant.
 * Heather is Paul's ancestor.
@@ -1778,7 +1778,7 @@ Select the correct answer:
 3. Harold and Jean share a common descendant.
 4. Harold is Jean's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,DESCENDANT,1,"Given the following lineage relationships:
 * Kathleen is Keith's descendant.
 * Diana is Alan's descendant.
@@ -1914,7 +1914,7 @@ Select the correct answer:
 3. Gerald and Nathan share a common descendant.
 4. Gerald is Nathan's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>5</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>5</ANSWER>
 128,COMMON_ANCESTOR,1,"Given the following lineage relationships:
 * Samuel is Linda's descendant.
 * Brandon is Judith's descendant.
@@ -2050,7 +2050,7 @@ Select the correct answer:
 3. Scott is Terry's descendant.
 4. Scott is Terry's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>5</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>5</ANSWER>
 128,COMMON_DESCENDANT,2,"Given the following lineage relationships:
 * Kelly is Aaron's descendant.
 * Jason is Steven's descendant.
@@ -2186,7 +2186,7 @@ Select the correct answer:
 3. Bryan and Austin share a common ancestor.
 4. Bryan is Austin's descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>5</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>5</ANSWER>
 128,ANCESTOR,2,"Given the following lineage relationships:
 * Keith is Andrew's ancestor.
 * Scott is Carl's ancestor.
@@ -2322,7 +2322,7 @@ Select the correct answer:
 3. Keith and Betty share a common ancestor.
 4. Keith and Betty share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>2</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>2</ANSWER>
 128,DESCENDANT,3,"Given the following lineage relationships:
 * Jean is Theresa's descendant.
 * Nancy is Evelyn's ancestor.
@@ -2458,7 +2458,7 @@ Select the correct answer:
 3. Janet is Russell's descendant.
 4. Janet and Russell share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>5</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>5</ANSWER>
 128,COMMON_ANCESTOR,2,"Given the following lineage relationships:
 * Sandra is Olivia's descendant.
 * David is Lori's descendant.
@@ -2594,7 +2594,7 @@ Select the correct answer:
 3. Nancy is Brandon's descendant.
 4. Nancy and Brandon share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,"
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,"
 Got it, let's try to figure out the relationship between Nancy and Brandon. First, I need to map out all the lineage paths we have for both Nancy and Brandon, starting with what we know about each.
 
 First, let's list out what we know about Nancy. The only direct mention of Nancy is: ""Christian is Nancy's ancestor."" So Christian → Nancy (ancestor means older generation, so Christian is above Nancy in the family tree).
@@ -2741,7 +2741,7 @@ Select the correct answer:
 3. Charles and Donald share a common ancestor.
 4. Charles and Donald share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>5</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>5</ANSWER>
 128,ANCESTOR,1,"Given the following lineage relationships:
 * Jacob is Paul's descendant.
 * Philip is Mark's ancestor.
@@ -2877,7 +2877,7 @@ Select the correct answer:
 3. Gabriel is Joan's descendant.
 4. Gabriel and Joan share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>1</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>1</ANSWER>
 128,DESCENDANT,2,"Given the following lineage relationships:
 * Aaron is Daniel's ancestor.
 * Emily is Stephanie's ancestor.
@@ -3013,7 +3013,7 @@ Select the correct answer:
 3. Angela and Keith share a common descendant.
 4. Angela is Keith's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>2</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>2</ANSWER>
 128,COMMON_ANCESTOR,2,"Given the following lineage relationships:
 * Harold is Arthur's descendant.
 * Sophia is Sara's ancestor.
@@ -3149,7 +3149,7 @@ Select the correct answer:
 3. Susan and Hannah share a common descendant.
 4. Susan is Hannah's descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>5</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>5</ANSWER>
 128,COMMON_DESCENDANT,1,"Given the following lineage relationships:
 * Maria is Betty's ancestor.
 * Raymond is Walter's ancestor.
@@ -3285,7 +3285,7 @@ Select the correct answer:
 3. David is Thomas's descendant.
 4. David is Thomas's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>1</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>1</ANSWER>
 128,ANCESTOR,3,"Given the following lineage relationships:
 * Jason is Shirley's descendant.
 * Hannah is Kenneth's ancestor.
@@ -3421,7 +3421,7 @@ Select the correct answer:
 3. Angela is Jerry's ancestor.
 4. Angela and Jerry share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,DESCENDANT,3,"Given the following lineage relationships:
 * Isabella is Ashley's ancestor.
 * Willie is Jeremy's descendant.
@@ -3557,7 +3557,7 @@ Select the correct answer:
 3. Donald is Adam's descendant.
 4. Donald and Adam share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,COMMON_ANCESTOR,2,"Given the following lineage relationships:
 * Amber is Megan's ancestor.
 * Kathleen is Kyle's descendant.
@@ -3693,7 +3693,7 @@ Select the correct answer:
 3. Janice is Grace's descendant.
 4. Janice is Grace's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>2</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>2</ANSWER>
 128,COMMON_DESCENDANT,3,"Given the following lineage relationships:
 * Thomas is Ruth's descendant.
 * Russell is Victoria's descendant.
@@ -3829,7 +3829,7 @@ Select the correct answer:
 3. Mark and Jacqueline share a common descendant.
 4. Mark is Jacqueline's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>5</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>5</ANSWER>
 128,ANCESTOR,4,"Given the following lineage relationships:
 * Lisa is Paul's descendant.
 * Nathan is Ethan's ancestor.
@@ -3965,7 +3965,7 @@ Select the correct answer:
 3. Samantha and Sandra share a common ancestor.
 4. Samantha is Sandra's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,DESCENDANT,3,"Given the following lineage relationships:
 * Raymond is Nicole's ancestor.
 * Jack is Roger's ancestor.
@@ -4101,7 +4101,7 @@ Select the correct answer:
 3. Donald is Stephanie's descendant.
 4. Donald and Stephanie share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,COMMON_ANCESTOR,4,"Given the following lineage relationships:
 * Kenneth is Jennifer's ancestor.
 * Roger is Anthony's ancestor.
@@ -4237,7 +4237,7 @@ Select the correct answer:
 3. Tyler is Kyle's ancestor.
 4. Tyler and Kyle share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,COMMON_DESCENDANT,2,"Given the following lineage relationships:
 * Billy is Patrick's ancestor.
 * Jeremy is Frances's ancestor.
@@ -4373,7 +4373,7 @@ Select the correct answer:
 3. Sarah is Tyler's descendant.
 4. Sarah is Tyler's ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,ANCESTOR,1,"Given the following lineage relationships:
 * Pamela is Barbara's descendant.
 * Elijah is Anthony's descendant.
@@ -4509,7 +4509,7 @@ Select the correct answer:
 3. Lauren is Beverly's descendant.
 4. Lauren and Beverly share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>1</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>1</ANSWER>
 128,DESCENDANT,4,"Given the following lineage relationships:
 * Harold is Gregory's descendant.
 * Steven is Martha's ancestor.
@@ -4645,7 +4645,7 @@ Select the correct answer:
 3. Diana and Linda share a common ancestor.
 4. Diana is Linda's descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,COMMON_ANCESTOR,1,"Given the following lineage relationships:
 * Cheryl is Paul's ancestor.
 * Nicole is Kathryn's ancestor.
@@ -4781,7 +4781,7 @@ Select the correct answer:
 3. Angela is Brian's ancestor.
 4. Angela is Brian's descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>1</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>1</ANSWER>
 128,COMMON_DESCENDANT,3,"Given the following lineage relationships:
 * Brian is Lori's ancestor.
 * Eugene is Timothy's descendant.
@@ -4917,7 +4917,7 @@ Select the correct answer:
 3. Robert and Keith share a common descendant.
 4. Robert is Keith's descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,ANCESTOR,3,"Given the following lineage relationships:
 * Andrea is Timothy's ancestor.
 * Eric is Raymond's ancestor.
@@ -5053,7 +5053,7 @@ Select the correct answer:
 3. Robert is Wayne's ancestor.
 4. Robert and Wayne share a common ancestor.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,DESCENDANT,4,"Given the following lineage relationships:
 * Robert is Eugene's descendant.
 * Teresa is Timothy's descendant.
@@ -5189,7 +5189,7 @@ Select the correct answer:
 3. Keith and Sara share a common descendant.
 4. Keith is Sara's descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
 128,COMMON_ANCESTOR,3,"Given the following lineage relationships:
 * Michelle is Jeffrey's ancestor.
 * Jennifer is Gary's descendant.
@@ -5325,7 +5325,7 @@ Select the correct answer:
 3. Doris and Edward share a common ancestor.
 4. Doris is Edward's descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>3</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>3</ANSWER>
 128,COMMON_DESCENDANT,4,"Given the following lineage relationships:
 * Peter is Matthew's ancestor.
 * Pamela is Jacob's ancestor.
@@ -5461,4 +5461,4 @@ Select the correct answer:
 3. Elijah is Jeffrey's ancestor.
 4. Elijah and Jeffrey share a common descendant.
 5. None of the above is correct.
-Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",Seed-OSS-36B-Instruct,,,,<ANSWER>4</ANSWER>
+Enclose the selected answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.",bytedance/seed-oss-36b-instruct,,,,<ANSWER>4</ANSWER>
