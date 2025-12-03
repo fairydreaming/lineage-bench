@@ -28,7 +28,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 #### Current results
 
-![results_stacked](https://github.com/user-attachments/assets/d91f8d92-c293-4a37-a599-b44378bca982)
+![results_stacked](https://github.com/user-attachments/assets/98fa220b-0c22-4918-95ee-a162ae8736e4)
 
 #### Old results
 
@@ -50,13 +50,13 @@ The table below presents the benchmark results. Medium reasoning effort was used
 |    7 | anthropic/claude-opus-4.5              |     0.869 |       1.000 |        0.950 |         0.900 |         0.625 |
 |    7 | x-ai/grok-4                            |     0.869 |       1.000 |        0.950 |         0.900 |         0.625 |
 |   10 | qwen/qwen3-235b-a22b-thinking-2507     |     0.856 |       0.900 |        0.875 |         0.850 |         0.800 |
-|   11 | deepseek/deepseek-v3.1-terminus:exacto |     0.812 |       0.975 |        0.900 |         0.700 |         0.675 |
-|   12 | openai/o3                              |     0.800 |       1.000 |        0.925 |         0.800 |         0.475 |
-|   13 | deepseek/deepseek-v3.2-exp             |     0.794 |       0.975 |        0.900 |         0.700 |         0.600 |
-|   14 | anthropic/claude-haiku-4.5             |     0.794 |       0.975 |        0.925 |         0.575 |         0.700 |
-|   15 | openai/gpt-5                           |     0.788 |       1.000 |        0.975 |         0.850 |         0.325 |
-|   16 | deepseek/deepseek-r1-0528              |     0.787 |       1.000 |        0.975 |         0.650 |         0.525 |
-|   17 | inclusionai/ring-1t                    |     0.762 |       0.875 |        0.950 |         0.650 |         0.575 |
+|   11 | inclusionai/ring-1t                    |     0.819 |       0.875 |        0.975 |         0.800 |         0.625 |
+|   12 | deepseek/deepseek-v3.1-terminus:exacto |     0.812 |       0.975 |        0.900 |         0.700 |         0.675 |
+|   13 | openai/o3                              |     0.800 |       1.000 |        0.925 |         0.800 |         0.475 |
+|   14 | deepseek/deepseek-v3.2-exp             |     0.794 |       0.975 |        0.900 |         0.700 |         0.600 |
+|   15 | anthropic/claude-haiku-4.5             |     0.794 |       0.975 |        0.925 |         0.575 |         0.700 |
+|   16 | openai/gpt-5                           |     0.788 |       1.000 |        0.975 |         0.850 |         0.325 |
+|   17 | deepseek/deepseek-r1-0528              |     0.787 |       1.000 |        0.975 |         0.650 |         0.525 |
 |   18 | deepcogito/cogito-v2.1-671b            |     0.756 |       0.975 |        0.800 |         0.650 |         0.600 |
 |   19 | x-ai/grok-4.1-fast                     |     0.750 |       1.000 |        0.900 |         0.800 |         0.300 |
 |   20 | baidu/ernie-5.0-thinking-preview       |     0.706 |       1.000 |        0.850 |         0.650 |         0.325 |
