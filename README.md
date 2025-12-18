@@ -37,7 +37,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ### Table
 
-The table below presents the benchmark results. Medium reasoning effort was used in Claude Opus 4.5, OpenAI and xAI models.
+The table below presents the benchmark results. If not explicitly stated default medium reasoning effort was used during benchmark.
 
 |   Nr | model_name                         |   lineage |   lineage-8 |   lineage-64 |   lineage-128 |   lineage-192 |
 |-----:|:-----------------------------------|----------:|------------:|-------------:|--------------:|--------------:|
