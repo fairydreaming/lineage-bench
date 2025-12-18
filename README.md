@@ -263,21 +263,21 @@ options:
 ### plot_line.py
 
 ```
-usage: plot_line.py [-h] [-o OUTPUT]
+usage: plot_line.py [-h] [-o OUTPUT] [-n TOP_N]
 
 options:
-  -h, --help            show this help message and exit
-  -o OUTPUT, --output OUTPUT
-                        Write rendered plot to this file.
+  -h, --help           show this help message and exit
+  -o, --output OUTPUT  Write rendered plot to this file.
+  -n, --top-n TOP_N    Show only n best results.
 ```
 
 ### plot_stacked.py
 
 ```
-usage: plot_stacked.py [-h] [-o OUTPUT]
+usage: plot_stacked.py [-h] [-o OUTPUT] [-n TOP_N]
 
 options:
-  -h, --help            show this help message and exit
-  -o OUTPUT, --output OUTPUT
-                        Write rendered plot to this file.
+  -h, --help           show this help message and exit
+  -o, --output OUTPUT  Write rendered plot to this file.
+  -n, --top-n TOP_N    Show only n best results.
 ```
