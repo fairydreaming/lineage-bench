@@ -9,11 +9,16 @@ import numpy as np
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--output", help="Write rendered plot to this file.")
+parser.add_argument("-n", "--top-n", help="Show only n best results.", type=int, default=30)
 args = parser.parse_args()
 
 output_file = args.output
+top_n = args.top_n
 
 df = pd.read_csv(sys.stdin)
+
+# get only top n results
+df = df[:top_n]
 
 col_names = df.columns[3:].values
 problem_sizes = list(map(lambda c: int(c.removeprefix('lineage-')), col_names))
@@ -32,10 +37,10 @@ for index, row in df.iterrows():
 plt.title('Lineage benchmark scores for different problem sizes.')
 plt.xlabel('Problem Size')
 plt.ylabel('Lineage Score')
-plt.legend(title='Model Name', loc='upper right')
+plt.legend(title='Model Name', loc='lower left')
 plt.xscale('log')
 plt.gca().get_xaxis().set_minor_locator(tck.AutoMinorLocator())
-plt.xticks([8, 16, 32, 64])
+plt.xticks(problem_sizes)
 plt.gca().get_xaxis().set_major_formatter(tck.ScalarFormatter())
 plt.grid(True)
 plt.tight_layout()
