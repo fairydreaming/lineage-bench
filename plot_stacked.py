@@ -7,15 +7,20 @@ import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--output", help="Write rendered plot to this file.")
+parser.add_argument("-n", "--top-n", help="Show only n best results.", type=int, default=30)
 args = parser.parse_args()
 
 output_file = args.output
+top_n = args.top_n
 
 # Read CSV data from stdin
 df = pd.read_csv(sys.stdin)
 
+# get only top n results
+df = df[:top_n]
+
 # Define category columns for stacking
-categories = col_names = df.columns[4:].values
+categories = col_names = df.columns[3:].values
 
 # Define bar positions and model names
 bar_positions = range(len(df))
