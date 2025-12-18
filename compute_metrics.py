@@ -19,6 +19,7 @@ def extract_answer(row, relaxed):
     if relaxed:
         relaxed_answer_regexes = [
             r'boxed\{([0-9])\}',
+            r'boxed\{\\text\{([0-9])\}\}',
             r'mathbf\{([0-9])\}',
             r'</ANSWER>([0-9])</ANSWER>',
             r'ANSWER:\s*([0-9])',
@@ -52,11 +53,14 @@ is_answer_relaxed = args.relaxed
 
 df = pd.read_csv(sys.stdin, names=['problem_size', 'relation_name', 'correct_answer', 'quiz', 'model_name', 'provider_name', 'reasoning_effort', 'system_prompt', 'model_response'], dtype={'problem_size': 'int32', 'relation_name': 'object', 'correct_answer': 'int32', 'quiz': 'object', 'model_name': 'object', 'provider_name': 'object', 'reasoning_effort': 'object', 'system_prompt': 'object', 'model_response': 'object'})
 
+# remove model name suffix like :free or :exacto
+df['model_name'] = df['model_name'].str.replace(r':.*$', '', regex=True)
 df['model_answer'] = df.apply(extract_answer, axis=1, args=(is_answer_relaxed,))
 df['answer_correct'] = df['correct_answer'] == df['model_answer']
 df['answer_incorrect'] = (df['correct_answer'] != df['model_answer']) & (0 != df['model_answer'])
 df['answer_missing'] = 0 == df['model_answer']
 df['reasoning_effort'] = df['reasoning_effort'].fillna("N/A")
+df['provider_name'] = df['provider_name'].fillna("N/A")
 
 df = df[['problem_size', 'relation_name', 'model_name', 'reasoning_effort', 'answer_correct', 'answer_incorrect', 'answer_missing']]
 
@@ -85,7 +89,9 @@ else:
 
     df['Nr'] = df['lineage'].rank(method='min', ascending=False).astype('int32')
 
-    df = df[['Nr', 'model_name', 'reasoning_effort', 'lineage'] + [f'lineage-{size}' for size in problem_sizes]]
+    # append reasoning effort to the model name
+    df.loc[df['reasoning_effort'] != 'N/A', 'model_name'] = df.loc[df['reasoning_effort'] != 'N/A', 'model_name'] + " (" + df.loc[df['reasoning_effort'] != 'N/A', 'reasoning_effort'] + ")"
+    df = df[['Nr', 'model_name', 'lineage'] + [f'lineage-{size}' for size in problem_sizes]]
 
 if gen_csv:
     print(df.to_csv(index=False))
