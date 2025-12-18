@@ -29,6 +29,8 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 #### Current results
 
+The plot below shows only the 30 top-performing models. See the table for all results.
+
 ![results_stacked](https://github.com/user-attachments/assets/571f2dcb-534c-446d-ba82-e307265607c7)
 
 #### Old results
