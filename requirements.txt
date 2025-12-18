@@ -1,0 +1,6 @@
+requests
+numpy
+pandas
+matplotlib
+tqdm
+tabulate
