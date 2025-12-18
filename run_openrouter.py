@@ -88,7 +88,7 @@ def make_request(row):
 
     if reasoning_effort:
         assert(reasoning_enabled)
-        assert(reasoning_effort in ["low", "medium", "high"])
+        assert(reasoning_effort in ["low", "medium", "high", "xhigh"])
         request_data["reasoning"]["effort"] = reasoning_effort
 
     if top_p:
