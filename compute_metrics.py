@@ -53,8 +53,8 @@ is_answer_relaxed = args.relaxed
 
 df = pd.read_csv(sys.stdin, names=['problem_size', 'relation_name', 'correct_answer', 'quiz', 'model_name', 'provider_name', 'reasoning_effort', 'system_prompt', 'model_response'], dtype={'problem_size': 'int32', 'relation_name': 'object', 'correct_answer': 'int32', 'quiz': 'object', 'model_name': 'object', 'provider_name': 'object', 'reasoning_effort': 'object', 'system_prompt': 'object', 'model_response': 'object'})
 
-# remove model name suffix like :free or :exacto
-df['model_name'] = df['model_name'].str.replace(r':.*$', '', regex=True)
+# remove model name suffix like :free or :exacto (but not :thinking)
+df['model_name'] = df['model_name'].str.replace(r':(free|exacto)$', '', regex=True)
 df['model_answer'] = df.apply(extract_answer, axis=1, args=(is_answer_relaxed,))
 df['answer_correct'] = df['correct_answer'] == df['model_answer']
 df['answer_incorrect'] = (df['correct_answer'] != df['model_answer']) & (0 != df['model_answer'])
