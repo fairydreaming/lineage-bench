@@ -7,7 +7,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 Benchmark results are now in a separate [lineage-bench-results](https://github.com/fairydreaming/lineage-bench-results) repository.
 
-Most recent results are in a [lineage-8_64_128_192](https://github.com/fairydreaming/lineage-bench-results/tree/main/lineage-8_64_128_192) directory.
+Most recent results are in the [lineage-8_64_128_192](https://github.com/fairydreaming/lineage-bench-results/tree/main/lineage-8_64_128_192) directory.
 
 ## Description
 The purpose of this project is to test LLM reasoning abilities with lineage relationship quizzes.
