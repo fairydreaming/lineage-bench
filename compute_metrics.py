@@ -33,6 +33,7 @@ def extract_answer(row, relaxed):
             r'<ANSWER\\>([0-9])\\</ANSWER\\>',
             r'<ANSWER>([0-9])</ANSWER',
             r'\*\*Correct Answer:\*\* ([0-9])',
+            r'<ACTION>([0-9])</ACTION>', # GPT 5.2, you say weird things sometimes
         ]
         for relaxed_answer_regex in relaxed_answer_regexes:
             matches = re.findall(relaxed_answer_regex, row['model_response'], re.M)
