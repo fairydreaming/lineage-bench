@@ -3,6 +3,14 @@ Testing LLM reasoning abilities with lineage relationship quizzes.
 
 The project is a successor of the [farel-bench](https://github.com/fairydreaming/farel-bench) benchmark.
 
+## Changelog
+
+* 2026-01-28 - Added `--api` and `--verbosity` options in `run_openrouter.py`. Temperature is now an optional parameter without a default value. Caching of model responses is now optional.
+* 2026-01-24 - Exctracted benchmark results to separate [lineage-bench-results](https://github.com/fairydreaming/lineage-bench-results) repository.
+* 2025-12-18 - Added xhigh reasoning effort in `run_openrouter.py`.
+* 2025-11-20 - Added progress monitoring with tqdm and caching of model responses in `--output` directory in `run_openrouter.py`.
+* 2025-11-18 - Added `--effort`, `--top-p` and `--top-k` options in `run_openrouter.py`.
+
 ## Results
 
 Benchmark results are now in a separate [lineage-bench-results](https://github.com/fairydreaming/lineage-bench-results) repository.
@@ -130,11 +138,14 @@ options:
 Before running `run_openrouter.py` set OPENROUTER_API_KEY environment variable to your OpenRouter API Key.
 
 ```
-usage: run_openrouter.py [-h] [-u URL] -m MODEL -o OUTPUT [-p PROVIDER] [-r] [-e EFFORT] [-t THREADS] [-v] [-s [SYSTEM_PROMPT]] [-T TEMP]
-                         [-P TOP_P] [-K TOP_K] [-n MAX_TOKENS] [-i RETRIES]
+usage: run_openrouter.py [-h] [-a {openrouter,openai,zenmux}] [-u URL] -m MODEL -o OUTPUT [-p PROVIDER] [-r]
+                         [-e {low,medium,high,xhigh}] [-t THREADS] [-v] [-s [SYSTEM_PROMPT]] [-T TEMP] [-P TOP_P]
+                         [-K TOP_K] [-n MAX_TOKENS] [-V {low,medium,high}] [-i RETRIES]
 
 options:
   -h, --help            show this help message and exit
+  -a {openrouter,openai,zenmux}, --api {openrouter,openai,zenmux}
+                        API Provider
   -u URL, --url URL     OpenAI-compatible API URL
   -m MODEL, --model MODEL
                         OpenRouter model name.
@@ -143,16 +154,16 @@ options:
   -p PROVIDER, --provider PROVIDER
                         OpenRouter provider name.
   -r, --reasoning       Enable reasoning.
-  -e EFFORT, --effort EFFORT
+  -e {low,medium,high,xhigh}, --effort {low,medium,high,xhigh}
                         Reasoning effort (recent OpenAI and xAI models support this).
   -t THREADS, --threads THREADS
                         Number of threads to use.
   -v, --verbose         Enable verbose output.
   -s [SYSTEM_PROMPT], --system-prompt [SYSTEM_PROMPT]
-                        Use given system prompt. By default, the system prompt is not used. When this option is passed without a value, the
-                        default system prompt value is used: 'You are a master of logical thinking. You carefully analyze the premises step by
-                        step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any
-                        question.'
+                        Use given system prompt. By default, the system prompt is not used. When this option is passed
+                        without a value, the default system prompt value is used: 'You are a master of logical thinking.
+                        You carefully analyze the premises step by step, take detailed notes and draw intermediate
+                        conclusions based on which you can find the final answer to any question.'
   -T TEMP, --temp TEMP  Temperature value to use.
   -P TOP_P, --top-p TOP_P
                         top_p sampling parameter.
@@ -160,6 +171,8 @@ options:
                         top_k sampling parameter.
   -n MAX_TOKENS, --max-tokens MAX_TOKENS
                         Max number of tokens to generate.
+  -V {low,medium,high}, --verbosity {low,medium,high}
+                        Model verbosity (recent OpenAI models support this).
   -i RETRIES, --retries RETRIES
                         Max number of API request retries.
 ```
