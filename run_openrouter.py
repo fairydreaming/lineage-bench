@@ -12,22 +12,31 @@ from tqdm.contrib.concurrent import process_map
 
 DEFAULT_SYSTEM_PROMPT="You are a master of logical thinking. You carefully analyze the premises step by step, take detailed notes and draw intermediate conclusions based on which you can find the final answer to any question."
 
+api_urls = {
+    "openrouter": "https://openrouter.ai/api/v1/chat/completions",
+    "openai": "https://api.openai.com/v1/chat/completions",
+    "zenmux": "https://zenmux.ai/api/v1/chat/completions",
+}
+
 parser = argparse.ArgumentParser()
-parser.add_argument("-u", "--url", help="OpenAI-compatible API URL", type=str, default="https://openrouter.ai/api/v1/chat/completions")
+parser.add_argument("-a", "--api", help="API Provider", type=str, default="openrouter", choices=["openrouter", "openai", "zenmux"])
+parser.add_argument("-u", "--url", help="OpenAI-compatible API URL", type=str)
 parser.add_argument("-m", "--model", help="OpenRouter model name.", required=True)
 parser.add_argument("-o", "--output", help="Directory for storing model responses.", required=True)
 parser.add_argument("-p", "--provider", help="OpenRouter provider name.")
 parser.add_argument("-r", "--reasoning", help="Enable reasoning.", action='store_true', default=False)
-parser.add_argument("-e", "--effort", help="Reasoning effort (recent OpenAI and xAI models support this).")
+parser.add_argument("-e", "--effort", help="Reasoning effort (recent OpenAI and xAI models support this).", choices=["low", "medium", "high", "xhigh"])
 parser.add_argument("-t", "--threads", help="Number of threads to use.", type=int, default=8)
 parser.add_argument("-v", "--verbose", help="Enable verbose output.", action="store_true")
 parser.add_argument("-s", "--system-prompt", help="Use given system prompt. By default, the system prompt is not used. When this option is passed without a value, the default system prompt value is used: " + repr(DEFAULT_SYSTEM_PROMPT), const=DEFAULT_SYSTEM_PROMPT, default=None, nargs='?')
-parser.add_argument("-T", "--temp", help="Temperature value to use.", type=float, default=0.01)
+parser.add_argument("-T", "--temp", help="Temperature value to use.", type=float)
 parser.add_argument("-P", "--top-p", help="top_p sampling parameter.", type=float)
 parser.add_argument("-K", "--top-k", help="top_k sampling parameter.", type=int)
 parser.add_argument("-n", "--max-tokens", help="Max number of tokens to generate.", type=int)
+parser.add_argument("-V", "--verbosity", help="Model verbosity (recent OpenAI models support this).", choices=["low", "medium", "high"])
 parser.add_argument("-i", "--retries", help="Max number of API request retries.", type=int, default=5)
 args = parser.parse_args()
+api_provider = args.api
 output_dir = args.output
 model_name = args.model
 provider_name = args.provider
@@ -38,9 +47,10 @@ num_threads = args.threads
 is_verbose = args.verbose
 temperature = args.temp
 max_tokens = args.max_tokens
+verbosity = args.verbosity
 top_p = args.top_p
 top_k = args.top_k
-api_url = args.url
+api_url = args.url if args.url else api_urls[api_provider]
 max_retries = args.retries
 
 quiz_reader = csv.reader(sys.stdin, delimiter=',', quotechar='"')
@@ -72,10 +82,12 @@ def make_request(row):
 
     request_data = {
         "model": model_name,
-        "temperature": temperature,
         "seed": 42,
         "messages": messages,
     }
+
+    if temperature:
+        request_data["temperature"] = temperature;
 
     if max_tokens:
         request_data["max_tokens"] = max_tokens
@@ -83,13 +95,18 @@ def make_request(row):
     if provider_name:
         request_data["provider"] = { "order": [ provider_name ], "allow_fallbacks": False }
 
-    if reasoning_enabled:
+    if api_provider != "openai" and reasoning_enabled:
         request_data["reasoning"] = { "enabled": True }
 
     if reasoning_effort:
         assert(reasoning_enabled)
-        assert(reasoning_effort in ["low", "medium", "high", "xhigh"])
-        request_data["reasoning"]["effort"] = reasoning_effort
+        if api_provider != "openai":
+            request_data["reasoning"]["effort"] = reasoning_effort
+        else:
+            request_data["reasoning_effort"] = reasoning_effort
+
+    if verbosity:
+        request_data["verbosity"] = verbosity
 
     if top_p:
         request_data["top_p"] = top_p
