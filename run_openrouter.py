@@ -22,7 +22,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-a", "--api", help="API Provider", type=str, default="openrouter", choices=["openrouter", "openai", "zenmux"])
 parser.add_argument("-u", "--url", help="OpenAI-compatible API URL", type=str)
 parser.add_argument("-m", "--model", help="OpenRouter model name.", required=True)
-parser.add_argument("-o", "--output", help="Directory for storing model responses.", required=True)
+parser.add_argument("-o", "--output", help="Directory for storing model responses.")
 parser.add_argument("-p", "--provider", help="OpenRouter provider name.")
 parser.add_argument("-r", "--reasoning", help="Enable reasoning.", action='store_true', default=False)
 parser.add_argument("-e", "--effort", help="Reasoning effort (recent OpenAI and xAI models support this).", choices=["low", "medium", "high", "xhigh"])
@@ -57,7 +57,7 @@ quiz_reader = csv.reader(sys.stdin, delimiter=',', quotechar='"')
 csv_writer = csv.writer(sys.stdout)
 api_key = os.getenv("OPENROUTER_API_KEY")
 
-if not os.path.exists(output_dir):
+if output_dir and not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 def make_request(row):
@@ -120,10 +120,10 @@ def make_request(row):
     request_json = json.dumps(request_data)
     response_json = None
 
-    request_file_path = os.path.join(output_dir, f"{quiz_id}_request.json")
-    response_file_path = os.path.join(output_dir, f"{quiz_id}_response.json")
+    request_file_path = os.path.join(output_dir, f"{quiz_id}_request.json") if output_dir else None
+    response_file_path = os.path.join(output_dir, f"{quiz_id}_response.json") if output_dir else None
 
-    if os.path.exists(request_file_path) and os.path.exists(response_file_path):
+    if output_dir and os.path.exists(request_file_path) and os.path.exists(response_file_path):
         # Skip API call if model response is already saved in a JSON file
         if is_verbose:
             print(f"{quiz_id} Skipping already answered quiz", file=sys.stderr)
@@ -158,10 +158,11 @@ def make_request(row):
                 if "error" in response_json["choices"][0]:
                     raise RuntimeError("Upstream server error")
 
-                with open(request_file_path, "w") as f:
-                    f.write(request_json)
-                with open(response_file_path, "w") as f:
-                    f.write(response.text.strip())
+                if request_file_path and response_file_path:
+                    with open(request_file_path, "w") as f:
+                        f.write(request_json)
+                    with open(response_file_path, "w") as f:
+                        f.write(response.text.strip())
 
                 break
             except Exception as ex:
