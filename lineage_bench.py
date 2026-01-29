@@ -142,7 +142,7 @@ def generate_quizzes(length, num_quizzes=10, prompt=DEFAULT_PROMPT, shuffle=Fals
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("-l", "--length", help = "Number of people connected with lineage relationships in the quiz.", type=int, required=True)
+    parser.add_argument("-l", "--length", help = "Number of people connected with lineage relationships in the quiz.", type=int, choices=range(4,201), metavar="[4-200]", required=True)
     parser.add_argument("-p", "--prompt", help = "Prompt template of the quiz. The default prompt template is: " + repr(DEFAULT_PROMPT), default=DEFAULT_PROMPT)
     parser.add_argument("-s", "--shuffle", help = "Shuffle the order of lineage relations in the quiz.", action="store_true")
     parser.add_argument("-n", "--number", help = "Number of quizzes generated for each valid answer option.", default=10, type=int)
