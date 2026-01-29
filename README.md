@@ -117,16 +117,17 @@ This results in 200 generated quizzes per problem size, 800 quizzes overall in a
 ### lineage_bench.py
 
 ```
-usage: lineage_bench.py [-h] -l LENGTH [-p PROMPT] [-s] [-n NUMBER] [-r SEED]
+usage: lineage_bench.py [-h] -l [4-200] [-p PROMPT] [-s] [-n NUMBER] [-r SEED]
 
 options:
   -h, --help            show this help message and exit
-  -l LENGTH, --length LENGTH
+  -l [4-200], --length [4-200]
                         Number of people connected with lineage relationships in the quiz.
   -p PROMPT, --prompt PROMPT
                         Prompt template of the quiz. The default prompt template is: 'Given the following lineage
-                        relationships:\n{quiz_relations}\n{quiz_question}\nSelect the correct answer:\n{quiz_answers}\nEnclose the selected
-                        answer number in the <ANSWER> tag, for example: <ANSWER>1</ANSWER>.'
+                        relationships:\n{quiz_relations}\n{quiz_question}\nSelect the correct
+                        answer:\n{quiz_answers}\nEnclose the selected answer number in the <ANSWER> tag, for example:
+                        <ANSWER>1</ANSWER>.'
   -s, --shuffle         Shuffle the order of lineage relations in the quiz.
   -n NUMBER, --number NUMBER
                         Number of quizzes generated for each valid answer option.
@@ -135,10 +136,10 @@ options:
 
 ### run_openrouter.py
 
-Before running `run_openrouter.py` set OPENROUTER_API_KEY environment variable to your OpenRouter API Key.
+Before running `run_openrouter.py` set OPENROUTER_API_KEY environment variable to your OpenRouter, OpenAI or ZenMux API Key.
 
 ```
-usage: run_openrouter.py [-h] [-a {openrouter,openai,zenmux}] [-u URL] -m MODEL -o OUTPUT [-p PROVIDER] [-r]
+usage: run_openrouter.py [-h] [-a {openrouter,openai,zenmux}] [-u URL] -m MODEL [-o OUTPUT] [-p PROVIDER] [-r]
                          [-e {low,medium,high,xhigh}] [-t THREADS] [-v] [-s [SYSTEM_PROMPT]] [-T TEMP] [-P TOP_P]
                          [-K TOP_K] [-n MAX_TOKENS] [-V {low,medium,high}] [-i RETRIES]
 
