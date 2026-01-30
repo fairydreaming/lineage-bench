@@ -216,5 +216,4 @@ options:
 
 What people say about my benchmark on Reddit:
 
-![toxicity.png](https://github.com/user-attachments/assets/a500b3ed-96fd-4f88-a4c1-e9369d872748)
-
+![toxic_waste.png](https://github.com/user-attachments/assets/0f490aed-0722-40d8-ab9b-ebedb2fc2f22)
