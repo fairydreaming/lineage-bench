@@ -211,3 +211,10 @@ options:
   -o, --output OUTPUT  Write rendered plot to this file.
   -n, --top-n TOP_N    Show only n best results.
 ```
+
+## Smile corner
+
+What people say about my benchmark on Reddit:
+
+![toxicity.png](https://github.com/user-attachments/assets/a500b3ed-96fd-4f88-a4c1-e9369d872748)
+
