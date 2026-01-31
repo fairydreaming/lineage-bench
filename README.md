@@ -8,7 +8,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 * 2025-12 - Detected unexpectedly low reasoning performance of GPT-5.2 at low, medium and high reasoning effort (xhigh works fine):
   * https://www.reddit.com/r/OpenAI/comments/1qqc8k7/unexpectedly_poor_logical_reasoning_performance/
   * https://community.openai.com/t/low-logical-reasoning-performance-of-gpt-5-2-at-medium-and-high-reasoning-effort-levels/1372853
-* 2025-02 - While testing Perplexity R1-1776 in lineage-bench detected problems with the model serving:
+* 2025-02 - Detected problems with the Perplexity R1-1776 model serving:
   * https://www.reddit.com/r/LocalLLaMA/comments/1izbmbb/perplexity_r1_1776_performs_worse_than_deepseek/
   * https://huggingface.co/perplexity-ai/r1-1776/discussions/254
 
