@@ -14,6 +14,7 @@ The project is a successor of the [farel-bench](https://github.com/fairydreaming
 
 ## Changelog
 
+* 2026-03-10 - Increased max number of lineage graph nodes from 200 to 2048.
 * 2026-01-28 - Added `--api` and `--verbosity` options in `run_openrouter.py`. Temperature is now an optional parameter without a default value. Caching of model responses is now optional.
 * 2026-01-24 - Exctracted benchmark results to separate [lineage-bench-results](https://github.com/fairydreaming/lineage-bench-results) repository.
 * 2025-12-18 - Added xhigh reasoning effort in `run_openrouter.py`.
